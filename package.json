@@ -1,0 +1,33 @@
+{
+  "name": "22-business.builder",
+  "version": "1.0.0",
+  "description": "Building our community's online presence by generating web-pages for our local small business owners.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcvarela21/business.builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcvarela21/business.builder/issues"
+  },
+  "homepage": "https://github.com/gcvarela21/business.builder#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "if-env": "^1.0.4",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "react-router-dom": "^5.2.0",
+    "sequelize": "^6.5.0"
+  }
+}
