@@ -15,6 +15,11 @@ module.exports = function (sequelize, DataTypes) {
         itemDesc: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+
+        itemCategory: {
+            type: DataTypes.STRING,
+            allowNull: true
         }
     });
 
