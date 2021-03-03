@@ -4,7 +4,12 @@ import React from "react";
 function Home() {
     return (
         <>
-            <p>Hey, I'm home.</p>
+            <div className="container-fluid">
+                <div className="row">
+                    <p>Hey, I'm home.</p>
+                </div>
+            </div>
+
         </>
     )
 }
