@@ -1,0 +1,10 @@
+USE danielle_DB;
+
+CREATE TABLE items (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  name VARCHAR(100) NULL,
+  itemCategory VARCHAR(100) NULL,
+  description VARCHAR(200) NULL,
+  price DECIMAL(10,4) NULL,
+  PRIMARY KEY (id)
+);
