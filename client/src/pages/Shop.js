@@ -23,7 +23,7 @@ function Shop() {
     return (
         <>
             <div className="container-fluid">
-                <div classname="row">
+                <div className="row">
                     {items.map((item, index) => {
                         return (<ItemCard
                             id={item.id}
