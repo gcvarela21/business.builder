@@ -1,10 +1,12 @@
+DROP DATABASE IF EXISTS danielle_DB;
+CREATE DATABASE danielle_DB;
 USE danielle_DB;
 
 CREATE TABLE items (
   id INTEGER(11) AUTO_INCREMENT NOT NULL,
-  name VARCHAR(100) NULL,
+  itemName VARCHAR(100) NULL,
   itemCategory VARCHAR(100) NULL,
-  description VARCHAR(200) NULL,
-  price DECIMAL(10,4) NULL,
+  itemDesc VARCHAR(200) NULL,
+  itemPrice DECIMAL(10,2) NULL,
   PRIMARY KEY (id)
 );

@@ -2,35 +2,33 @@ const db = require("../models");
 
 module.exports = {
   findAll: function (req, res) {
-    db.savedBooks.find(req.query)
-      .sort({ title: 1 })
+    db.item.findAll(req.query)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.savedBooks.findById(req.params.id)
+    db.items.findOne({ where: { id: req.params.id } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByName: function (req, res) {
     // doublecheck this
-    db.savedBooks.findAll({ where: { itemName: req.params.itemName } })
+    db.items.findAll({ where: { itemName: req.params.itemName } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {
-    db.savedBooks.create(req.body)
+    db.items.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   update: function (req, res) {
-    db.savedBooks.findOneAndUpdate({ _id: req.params.id }, req.body)
+    db.items.update({ where: { id: req.params.id } }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   remove: function (req, res) {
-    db.savedBooks.findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
+    db.items.destroy({ where: { id: req.params.id } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
