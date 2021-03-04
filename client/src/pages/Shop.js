@@ -28,10 +28,10 @@ function Shop() {
                         return (<ItemCard
                             id={item.id}
                             key={index}
-                            itemName={itemName}
-                            itemPrice={itemPrice}
-                            itemDesc={itemDesc}
-                            itemCategory={itemCategory}
+                            itemName={item.itemName}
+                            itemPrice={item.itemPrice}
+                            itemDesc={item.itemDesc}
+                            itemCategory={item.itemCategory}
                         />)
                     })}
                 </div>
