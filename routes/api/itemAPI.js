@@ -4,14 +4,14 @@ const itemController = require("../../controller/itemController");
 // Matches with "/api/posts"
 router
     .route("/")
-    .get(itemController.findAll)
-    .post(itemController.create);
+    .get(itemController.findAllItems)
+    .post(itemController.createItem);
 
 // Matches with "/api/books/:id"
 router
     .route("/:id")
     // .get(itemController.findById)
-    .put(itemController.update)
-    .delete(itemController.remove);
+    .put(itemController.updateItem)
+    .delete(itemController.removeItem);
 
 module.exports = router;
