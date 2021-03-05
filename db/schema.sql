@@ -8,5 +8,21 @@ CREATE TABLE items (
   itemCategory VARCHAR(100) NULL,
   itemDesc VARCHAR(200) NULL,
   itemPrice DECIMAL(10,2) NULL,
+  itemImage VARCHAR(1024) NULL,
+  itemServingSize INTEGER
   PRIMARY KEY (id)
 );
+
+CREATE TABLE cart (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  purchased BOOLEAN
+)
+
+CREATE TABLE user (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  username VARCHAR(100) NOT NULL,
+  pass VARCHAR(100) NOT NULL,
+  orderID INT NULL
+)
+
+
