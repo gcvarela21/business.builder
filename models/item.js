@@ -20,6 +20,16 @@ module.exports = function (sequelize, DataTypes) {
         itemCategory: {
             type: DataTypes.STRING,
             allowNull: true
+        },
+
+        itemImg: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+
+        itemServingSize: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         }
     }, {
         timestamps: false
