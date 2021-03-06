@@ -6,6 +6,11 @@ export default {
         return axios.get("/api/item");
     },
 
+    getCategory: function (itemCategory) {
+        console.log("API")
+        return axios.get("/api/item/" + itemCategory);
+    },
+
     deleteItem: function (id) {
         return axios.delete("/api/item/" + id);
     },
