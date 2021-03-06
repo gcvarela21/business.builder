@@ -58,3 +58,14 @@ db.sequelize.sync().then(function () {
         // get route - gets all items/quantity in a specific cart
         // delete route - delete item from cart
         // put - update item quantity
+
+// sat todo
+
+// client-side 
+    // 1. modal functionality
+    // 2. build admin page - change add-to-cart to change item and add delete button onto adminItemCard, also add addItem butt, also add popup page with editting capabilities
+    // 3. add popup page
+    // 4. cart stuff (see above) - new pagina
+
+
+
