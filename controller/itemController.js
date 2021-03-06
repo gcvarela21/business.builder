@@ -12,7 +12,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByCategory: function (req, res) {
-    console.log(req)
+    // console.log(req)
     db.Item.findAll({ where: { itemCategory: req.params.itemCategory } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

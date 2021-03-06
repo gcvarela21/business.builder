@@ -7,7 +7,7 @@ export default {
     },
 
     getCategory: function (itemCategory) {
-        console.log("API")
+        // console.log(itemCategory)
         return axios.get("/api/item/" + itemCategory);
     },
 

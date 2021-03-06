@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Order = sequelize.define("Order", {
+    var Patron = sequelize.define("Patron", {
         firstName: {
             type: DataTypes.STRING,
             allowNull: true
@@ -16,13 +16,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true
         },
-        orderID: {
+        PatronID: {
             type: DataTypes.STRING,
             allowNull: true
         },
     });
-    Order.associate = function (models) {
-
-    };
-    return Order;
+    return Patron;
 };
