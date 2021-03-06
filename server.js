@@ -48,11 +48,6 @@ db.sequelize.sync().then(function () {
 
 // serverside
 
-    // routes:
-        // get route- gets all items
-        // get route- gets all items in a specific category
-    // cart table -
-        // post route for creating a new cart
     // cartItems join table -
         // post route posting new item with an existing cart
         // get route - gets all items/quantity in a specific cart

@@ -14,7 +14,7 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    PrderItem.associate = function (models) {
+    OrderItem.associate = function (models) {
         models.Order.belongsToMany(models.Item, { through: OrderItem });
         models.Item.belongsToMany(models.Order, { through: OrderItem });
 
