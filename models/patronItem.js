@@ -18,5 +18,5 @@ module.exports = function (sequelize, DataTypes) {
         models.Patron.belongsToMany(models.Item, { through: PatronItem });
         models.Item.belongsToMany(models.Patron, { through: PatronItem });
     };
-    return patronItem;
+    return PatronItem;
 };

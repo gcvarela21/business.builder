@@ -10,7 +10,7 @@ router
 // Matches with "/api/item/:id"
 router
     .route("/:id")
-    // .get(itemController.findById)
+    .get(itemController.findItemById)
     .put(itemController.updateItem)
     .delete(itemController.removeItem);
 
