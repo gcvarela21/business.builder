@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var order = sequelize.define("order", {
+    var Order = sequelize.define("Order", {
         firstName: {
             type: DataTypes.STRING,
             allowNull: true
@@ -21,8 +21,8 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: true
         },
     });
-    order.associate = function (models) {
+    Order.associate = function (models) {
 
     };
-    return order;
+    return Order;
 };
