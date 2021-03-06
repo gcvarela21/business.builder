@@ -32,6 +32,11 @@ function Shop() {
             .catch(err => console.log(err));
     }, [])
 
+    // ADD ITEM TO CART FUNCTION.. connect to button inside modal.
+    // function addItems(id){
+
+    // }
+
     return (
         <>
             <div className="container-fluid">
