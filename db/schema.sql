@@ -1,22 +1,5 @@
 DROP DATABASE IF EXISTS danielle_DB;
 CREATE DATABASE danielle_DB;
-USE danielle_DB;
-
-CREATE TABLE items (
-  id INTEGER(11) AUTO_INCREMENT NOT NULL,
-  itemName VARCHAR(100) NULL,
-  itemCategory VARCHAR(100) NULL,
-  itemDesc VARCHAR(200) NULL,
-  itemPrice DECIMAL(10,2) NULL,
-  itemImage VARCHAR(1024) NULL,
-  itemServingSize INTEGER
-  PRIMARY KEY (id)
-);
-
-CREATE TABLE cart (
-  id INTEGER(11) AUTO_INCREMENT NOT NULL,
-  purchased BOOLEAN
-)
 
 CREATE TABLE user (
   id INTEGER(11) AUTO_INCREMENT NOT NULL,

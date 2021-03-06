@@ -27,3 +27,34 @@ db.sequelize.sync().then(function () {
         console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
     });
 });
+
+// client home
+    // 1. when home component mounts (useeffect) uses run utility on homepage
+    // 2. run utility for indexdb set pending to readwrite = true, set transaciton with store
+    // - checks for db name and version num
+    // 3. store.getAll - looks for everything in indexdb store
+    // 4. getNumItems - only sends back length of the array to show shopper how many items are in the cart
+    // 5. when we get back the number update state to update navbar component
+
+
+// client shop
+    // 0. API call using axios to only show the category the user wants api/item/ or 
+    // 1. when home component mounts (useeffect) uses run utility on homepage
+    // 2. run utility for indexdb set pending to readwrite = true, set transaciton with store
+    // - checks for db name and version num
+    // 3. store.getAll - looks for everything in indexdb store
+    // 4. send back whole array
+    // 5. insertItem - similar to saveRecord in 17-nosql 26-budgettracker
+
+// serverside
+
+    // routes:
+        // get route- gets all items
+        // get route- gets all items in a specific category
+    // cart table -
+        // post route for creating a new cart
+    // cartItems join table -
+        // post route posting new item with an existing cart
+        // get route - gets all items/quantity in a specific cart
+        // delete route - delete item from cart
+        // put - update item quantity

@@ -1,34 +1,28 @@
 module.exports = function (sequelize, DataTypes) {
-    var Item = sequelize.define("Item", {
-
-        itemName: {
+    var order = sequelize.define("order", {
+        firstName: {
             type: DataTypes.STRING,
             allowNull: true
         },
-
-        itemPrice: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            defaultValue: 0
-        },
-
-        itemDesc: {
+        lastName: {
             type: DataTypes.STRING,
             allowNull: true
         },
-
-        itemCategory: {
+        email: {
             type: DataTypes.STRING,
             allowNull: true
         },
-
-        itemImg: {
+        phoneNumber: {
             type: DataTypes.STRING,
             allowNull: true
-        }
-    }, {
-        timestamps: false
+        },
+        orderID: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
     });
+    order.associate = function (models) {
 
-    return Item;
+    };
+    return order;
 };

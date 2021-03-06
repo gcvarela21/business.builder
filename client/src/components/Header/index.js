@@ -7,7 +7,7 @@ function Header() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
-                    <i class="fas fa-user-alt pro"></i><p className="cart">cart</p><p id="cart"></p>
+                        <i className="fas fa-user-alt pro"></i><p className="cart">cart</p><p id="cart"></p>
                     </div>
                 </div>
 
