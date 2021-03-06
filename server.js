@@ -46,13 +46,6 @@ db.sequelize.sync().then(function () {
     // 4. send back whole array
     // 5. insertItem - similar to saveRecord in 17-nosql 26-budgettracker
 
-// serverside
-
-    // cartItems join table -
-        // post route posting new item with an existing cart
-        // get route - gets all items/quantity in a specific cart
-        // delete route - delete item from cart
-        // put - update item quantity
 
 // sat todo
 
