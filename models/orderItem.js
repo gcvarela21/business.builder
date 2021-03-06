@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var orderItem = sequelize.define("orderItem", {
+    var OrderItem = sequelize.define("OrderItem", {
         // orderItemID - given to shopper when shopper purchases order
 
         id: {
@@ -14,9 +14,9 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-    orderItem.associate = function (models) {
-        models.order.belongsToMany(models.Item, { through: orderItem });
-        models.Item.belongsToMany(models.order, { through: orderItem });
+    PrderItem.associate = function (models) {
+        models.Order.belongsToMany(models.Item, { through: OrderItem });
+        models.Item.belongsToMany(models.Order, { through: OrderItem });
 
         // models.orderItem.hasMany(models.item, {as: "orderItem", foreignKey: "itemID"})
         // models.item.belongsToMany(models.orderItem, {foreignKey: "itemID"})
@@ -32,5 +32,5 @@ module.exports = function (sequelize, DataTypes) {
         // itemID
         // orderID
     };
-    return orderItem;
+    return OrderItem;
 };
