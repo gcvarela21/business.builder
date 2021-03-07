@@ -1,16 +1,14 @@
 const router = require("express").Router();
 const itemController = require("../../controller/itemController");
 
-// Matches with "/api/item"
 router
     .route("/")
     .get(itemController.findAllItems)
     .post(itemController.createItem);
 
-// Matches with "/api/item/:id"
 router
     .route("/:id")
-    // .get(itemController.findById)
+    // .get(itemController.findItemById)
     .put(itemController.updateItem)
     .delete(itemController.removeItem);
 

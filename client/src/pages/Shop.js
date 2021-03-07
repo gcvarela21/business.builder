@@ -8,12 +8,25 @@ import ItemCard from "../components/ItemCard"
 function Shop() {
 
     const [items, setItemsDatabase] = useState([]);
+    // const [modalInfo, setModalInfo] = useState({});
+
+    // function updateModal(id) {
+    //     console.log(id)
+    //     API.getItem(id)
+    //         .then(res => setModalInfo(res.data))
+    //         .catch(err => console.log(err));
+    // }
+    const { itemCategory } = useParams()
+
+    useEffect(() => {
+        API.getCategory(itemCategory)
+            .then(res => setItemsDatabase(res.data))
+            .catch(err => console.log(err));
+    }, [])
+
+
     // cart
     // modal izitoast or notie
-
-    // useEffect(() => {
-    //     showItems()
-    // }, [])
 
     // function showItems() {
     //     API.getAllItems()
@@ -25,12 +38,10 @@ function Shop() {
 
     // OR
 
-    const { itemCategory } = useParams()
-    useEffect(() => {
-        API.getCategory(itemCategory)
-            .then(res => setItemsDatabase(res.data))
-            .catch(err => console.log(err));
-    }, [])
+    // ADD ITEM TO CART FUNCTION.. connect to button inside modal.
+    // function addItems(id){
+
+    // }
 
     return (
         <>
@@ -44,10 +55,12 @@ function Shop() {
                             itemPrice={item.itemPrice}
                             itemDesc={item.itemDesc}
                             itemCategory={item.itemCategory}
+                            itemImg={item.itemImg}
                         />)
                     })}
                 </div>
             </div>
+
         </>
     )
 }
