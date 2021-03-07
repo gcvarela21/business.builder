@@ -23,17 +23,16 @@ function ItemModal(props) {
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">
-                        <img src={props.itemImg}></img>
+                        <img alt="baked item" src={props.itemImg}></img>
                         <p>{props.itemDesc}</p>
                         <p>Price: ${props.itemPrice}</p>
                         <form onSubmit={(event) => {
                             event.preventDefault()
                             addToLocal(event)
-                            console.log(event)
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label">QUANTITY</label>
-                            <input type="number" className="form-control" id="quantity"></input>
+                            <input type="number" className="form-control" id={props.id}></input>
 
                             <button type="submit" className="btn btn-primary" >Add To Cart</button>
                         </form>

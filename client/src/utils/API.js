@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default {
+var axiosCalls = {
     // Gets all items
     getAllItems: function () {
         return axios.get("/api/item");
@@ -22,3 +22,5 @@ export default {
         return axios.post("/api/item", itemData);
     }
 };
+
+export default axiosCalls;
