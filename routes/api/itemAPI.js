@@ -6,11 +6,11 @@ router
     .get(itemController.findAllItems)
     .post(itemController.createItem);
 
-router
-    .route("/:id")
-    // .get(itemController.findItemById)
-    .put(itemController.updateItem)
-    .delete(itemController.removeItem);
+// router
+//     .route("/id/:id")
+//     .get(itemController.findItemById)
+//     .put(itemController.updateItem)
+//     .delete(itemController.removeItem);
 
 router
     .route("/:itemCategory")

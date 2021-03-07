@@ -7,6 +7,7 @@ import Shop from "./pages/Shop.js";
 import Gallery from "./pages/Gallery.js";
 import Login from "./pages/Login.js";
 import About from "./pages/About.js";
+import CartCheckout from "./pages/CartCheckout.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/cart" component={CartCheckout} />
       </Router>
     </>
   );

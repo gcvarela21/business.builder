@@ -7,7 +7,7 @@ var axiosCalls = {
     },
 
     getItem: function (id) {
-        return axios.get("/api/item/" + id);
+        return axios.get("/api/itemid/" + id);
     },
 
     getCategory: function (itemCategory) {
@@ -15,7 +15,7 @@ var axiosCalls = {
     },
 
     deleteItem: function (id) {
-        return axios.delete("/api/item/" + id);
+        return axios.delete("/api/itemid/" + id);
     },
 
     createItem: function (itemData) {

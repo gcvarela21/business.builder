@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
         },
 
         itemDesc: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(1020),
             allowNull: true
         },
 

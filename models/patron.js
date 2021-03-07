@@ -15,11 +15,7 @@ module.exports = function (sequelize, DataTypes) {
         phoneNumber: {
             type: DataTypes.STRING,
             allowNull: true
-        },
-        PatronID: {
-            type: DataTypes.STRING,
-            allowNull: true
-        },
+        }
     });
     return Patron;
 };
