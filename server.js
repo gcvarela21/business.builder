@@ -29,31 +29,19 @@ db.sequelize.sync().then(function () {
 });
 
 // client home
-    // 1. when home component mounts (useeffect) uses run utility on homepage
-    // 2. run utility for indexdb set pending to readwrite = true, set transaciton with store
-    // - checks for db name and version num
-    // 3. store.getAll - looks for everything in indexdb store
-    // 4. getNumItems - only sends back length of the array to show shopper how many items are in the cart
-    // 5. when we get back the number update state to update navbar component
 
 
-// client shop
-    // 0. API call using axios to only show the category the user wants api/item/ or 
-    // 1. when home component mounts (useeffect) uses run utility on homepage
-    // 2. run utility for indexdb set pending to readwrite = true, set transaciton with store
-    // - checks for db name and version num
-    // 3. store.getAll - looks for everything in indexdb store
-    // 4. send back whole array
-    // 5. insertItem - similar to saveRecord in 17-nosql 26-budgettracker
-
-
-// sat todo
+// sun todo
 
 // client-side 
-    // 1. modal functionality
-    // 2. build admin page - change add-to-cart to change item and add delete button onto adminItemCard, also add addItem butt, also add popup page with editting capabilities
-    // 3. add popup page
-    // 4. cart stuff (see above) - new pagina
+    // 1. checkout page >-> show itemName, itemPrice, quantity, total price and checkout button which sends local storage to DB and clears local storage
+    // 2. learn how stripe works and react calendar
+    // 2. build admin page (change, delete, and create button)
+    // 3. when home component mounts (useeffect) uses run utility on homepage ----------- localstorage.length
+    // 4. add izitoast notificaitons to modal and on submit close the modal when user inputs quantity
+
+// server
+
 
 
 
