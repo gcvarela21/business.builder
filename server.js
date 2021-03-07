@@ -34,14 +34,10 @@ db.sequelize.sync().then(function () {
 // sun todo
 
 // client-side 
-    // 1. checkout page >-> show itemName, itemPrice, quantity, total price and checkout button which sends local storage to DB and clears local storage
+    // 1. checkout/cart page >-> show itemName, itemPrice, quantity, total price and checkout button which sends local storage to DB and clears local storage
     // 2. learn how stripe works and react calendar
     // 2. build admin page (change, delete, and create button)
     // 3. when home component mounts (useeffect) uses run utility on homepage ----------- localstorage.length
     // 4. add izitoast notificaitons to modal and on submit close the modal when user inputs quantity
 
 // server
-
-
-
-
