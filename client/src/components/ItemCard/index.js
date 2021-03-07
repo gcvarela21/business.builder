@@ -1,5 +1,5 @@
 import React from "react";
-import ItemModal from "../itemModal";
+import ItemModal from "../ItemModal";
 
 function ItemCard(props) {
 
@@ -9,7 +9,8 @@ function ItemCard(props) {
                 <img src="https://via.placeholder.com/200" className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{props.itemName}</h5>
-                    <p className="card-text">{props.itemPrice}</p>
+                    <p>{props.itemDesc}</p>
+                    <p className="card-text">${props.itemPrice}</p>
                     <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target={"#a" + props.id}>View</button>
                 </div>
             </div>

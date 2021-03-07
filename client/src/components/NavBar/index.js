@@ -32,17 +32,17 @@ function NavBar() {
                             </li>
                             {/* <Link to={"/gallery"}> */}
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Gallery</a>
+                                <a className="nav-link" href="/gallery">Gallery</a>
                             </li>
                             {/* </Link> */}
                             {/* <Link to={"/about"}> */}
                             <li className="nav-item">
-                                <a className="nav-link" href="#">About</a>
+                                <a className="nav-link" href="/about">About</a>
                             </li>
                             {/* </Link> */}
                             {/* <Link to={"/contact"}> */}
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact</a>
+                                <a className="nav-link" href="/contact">Contact</a>
                             </li>
                             {/* </Link> */}
                         </ul>
