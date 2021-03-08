@@ -1,0 +1,7 @@
+.card-body {
+    border-bottom: 1px solid;
+}
+
+.card-text{
+    float: right;
+}

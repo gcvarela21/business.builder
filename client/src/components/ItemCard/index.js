@@ -6,8 +6,11 @@ function ItemCard(props) {
 
     return (
         <>
-            <div className="card" style={{ width: 300 }}>
-                <img src={props.itemImg}className="card-img-top" alt="..." />
+            <div className="card container" style={{ width: 300 }}>
+                <img src={props.itemImg} className="card-img-top item-image" alt="..." />
+                <div className="middle">
+                    <div className="text">View</div>
+                </div>
                 <div className="card-body">
                     <h5 className="card-title">{props.itemName}</h5>
                     <p>{props.itemDesc}</p>

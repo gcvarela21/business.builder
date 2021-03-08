@@ -20,6 +20,14 @@ var axiosCalls = {
 
     createItem: function (itemData) {
         return axios.post("/api/item", itemData);
+    },
+
+    createPatron: function (itemData) {
+        return axios.post("/api/patron", itemData);
+    },
+
+    createOrder: function (itemData) {
+        return axios.post("/api/patronItem", itemData);
     }
 };
 

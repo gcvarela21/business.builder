@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 
 
 function Checkout(props) {
@@ -7,10 +8,11 @@ function Checkout(props) {
             <div className="container">
                 <div className="card">
                     <div className="card-body">
-                        <h5 className="card-title">{props.itemName}</h5>
-                        <h5 className="card-title">{props.itemDesc}</h5>
-                        <p className="card-text">{props.itemPrice}</p>
+                        <h4 className="card-title">{props.itemName}</h4>
+                        <p className="card-title">{props.itemDesc}</p>
                         <img src={props.itemImg} alt="baked good" />
+                        <p style={{ float: "right" }} className="card-text"><strong>Quantity: </strong>{props.itemQuantity}<br /><strong>Total: </strong>${props.itemPrice}</p>
+
                     </div>
                 </div>
             </div>
