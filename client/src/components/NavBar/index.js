@@ -34,7 +34,7 @@ function NavBar() {
             <div className="brand navbar-brand navBar container-fluid d-md-none">
                 <div className="d-flex justify-content-end col-12">
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
 
                     </button>
                 </div>

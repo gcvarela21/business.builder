@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import API from "../utils/API";
 import Checkout from "../components/Checkout"
 import { loadStripe } from "@stripe/stripe-js";
+import axios from "axios"
 
 function CartCheckout(props) {
     const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
     const [cartItems, setCartItems] = useState([]);
+    // function that takes in cart items to sum them
 
     var localArr = []
     useEffect(() => {
@@ -24,22 +26,34 @@ function CartCheckout(props) {
     }
 
     // stripe stuff to whisk the patron away
-    const handleClick = async (event) => {
+    const handleClick = async () => {
         console.log("stripe was pressed")
         const stripe = await stripePromise;
-        const response = await fetch("/create-checkout-session", {
-            method: "POST",
-        });
-        const session = await response.json();
+        // execute total here
+        // transaction name - maybe stripe id or 
+        axios.post("/create-checkout-session", { cartItems: cartItems })
+            .then(async function (data) {
+                const result = await stripe.redirectToCheckout({
+                    sessionId: data.data.id,
+                });
+            })
+            .catch(function (err) {
+                console.log(err)
+            })
+        // console.log(response)
+        // const response = await fetch("/create-checkout-session", {
+        //     method: "POST",
+        //     body: JSON.stringify({ cartItems: cartItems })
+        // });
+        // console.log(cartItems)
+        // const session = await response.json();
         // When the customer clicks on the button, redirect them to Checkout.
-        const result = await stripe.redirectToCheckout({
-            sessionId: session.id,
-        });
-        if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer
-            // using `result.error.message`.
-        }
+
+        // if (result.error) {
+        //     // If `redirectToCheckout` fails due to a browser or network
+        //     // error, display the localized error message to your customer
+        //     // using `result.error.message`.
+        // }
     };
 
     return (
@@ -50,7 +64,7 @@ function CartCheckout(props) {
                         id={cart.id}
                         key={index}
                         itemName={cart.itemName}
-                        itemPrice={cart.itemPrice}
+                        itemPriceCent={cart.itemPriceCent}
                         itemDesc={cart.itemDesc}
                         itemCategory={cart.itemCategory}
                         itemImg={cart.itemImg}
@@ -58,6 +72,7 @@ function CartCheckout(props) {
                         handleClick={handleClick}
                     />)
                 })}
+                <button className="btn btn-primary" onClick={() => handleClick()}>Checkout and Pay</button>
             </div>
         </>
     )
