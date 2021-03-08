@@ -1,54 +1,68 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import "./index.css";
 
 function NavBar() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <div className="container-fluid">
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+            <nav className="brand navbar-brand navBar container-fluid d-none d-md-inline">
+                <ul className="d-flex justify-content-center">
+                    <li className="navItem">
+                        <a className="navLink" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li className="navItem dropdown">
+                        <a className="navItem dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a className="dropItem" href="/shop/cakes">Cakes</a></li>
+                            <li><a className="dropItem" href="/shop/cookies">Cookies</a></li>
+                            <li><a className="dropItem" href="/shop/special_treats">Special Treats</a></li>
+                        </ul>
+                    </li>
+                    <li className="navItem">
+                        <a className="navLink" href="/gallery">Gallery</a>
+                    </li>
+                    <li className="navItem">
+                        <a className="navLink" href="/about">About</a>
+                    </li>
+                    <li className="navItem">
+                        <a className="navLink" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav >
+
+            <div className="brand navbar-brand navBar container-fluid d-md-none">
+                <div className="d-flex justify-content-end col-12">
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav">
-                            {/* <Link to={"/home", "/"}> */}
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/">Home</a>
+                </div>
+                <div className="d-flex justify-content-end col-12">
+                    <div id="inBlock" className="collapse" id="navbarToggleExternalContent">
+                        <ul id="inBlock" className="">
+                            <li className="navItem">
+                                <a className="navLink" aria-current="page" href="/">Home</a>
                             </li>
-                            {/* </Link> */}
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <li id="shop" className="navItem dropdown">
+                                <a className="navItem dropdown-toggle" href="/" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    {/* <Link to={"/shop"}> */}
-                                    <li><a className="dropdown-item" href="/shop/cakes">Cakes</a></li>
-                                    {/* </Link> */}
-                                    {/* <Link to={"/cookies"}> */}
-                                    <li><a className="dropdown-item" href="/shop/cookies">Cookies</a></li>
-                                    {/* </Link> */}
-                                    {/* <Link to={"/specialtreats"}> */}
-                                    <li><a className="dropdown-item" href="/shop/special_treats">Special Treats</a></li>
-                                    {/* </Link> */}
+                                    <li><a className="dropItem" href="/shop/cakes">Cakes</a></li>
+                                    <li><a className="dropItem" href="/shop/cookies">Cookies</a></li>
+                                    <li><a className="dropItem" href="/shop/special_treats">Special Treats</a></li>
                                 </ul>
                             </li>
-                            {/* <Link to={"/gallery"}> */}
-                            <li className="nav-item">
-                                <a className="nav-link" href="/gallery">Gallery</a>
+                            <li className="navItem">
+                                <a className="navLink" href="/gallery">Gallery</a>
                             </li>
-                            {/* </Link> */}
-                            {/* <Link to={"/about"}> */}
-                            <li className="nav-item">
-                                <a className="nav-link" href="/about">About</a>
+                            <li className="navItem">
+                                <a className="navLink" href="/about">About</a>
                             </li>
-                            {/* </Link> */}
-                            {/* <Link to={"/contact"}> */}
-                            <li className="nav-item">
-                                <a className="nav-link" href="/contact">Contact</a>
+                            <li className="navItem">
+                                <a className="navLink" href="/contact">Contact</a>
                             </li>
-                            {/* </Link> */}
                         </ul>
                     </div>
+
                 </div>
-            </nav >
+            </div>
         </>
     )
 }

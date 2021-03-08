@@ -17,7 +17,7 @@ function Header() {
 
                 <div className="row">
                     <div className="col-12 d-flex justify-content-center">
-                        <img src="https://via.placeholder.com/1500x200/000000/FFFFFF/?text=Danielle M. Estrella" alt="Logo Header for Danielle M. Estrella" />
+                        <img src="https://hosting.photobucket.com/images/i/danielle-m-estrella/logo_DME_crafter.png?width=1920&height=1080&fit=bounds" alt="Logo Header for Danielle M. Estrella" />
                     </div>
                 </div>
             </div>

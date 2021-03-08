@@ -1,0 +1,53 @@
+nav, ul, li {
+    text-decoration: none;
+    list-style-type:none;
+}
+
+a {
+    cursor: pointer;
+    list-style-type:none;
+}
+
+.navBar {
+    text-decoration: none;
+}
+
+.navItem {
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+}
+
+.dropItem {
+    text-decoration: none;
+}
+
+
+a:link, a:visited, a:active {
+  color: black;
+}
+
+a:hover {
+  color: #505050;
+}
+
+button:visited, button:active {
+    text-decoration: none;
+    border: none;
+}
+
+#inBlock {
+    display: block;
+}
+
+#shop {
+    padding-right: 0px;
+}
+
+#navbarDropdownMenuLink {
+    padding: 0px, 0px, 0px,0px;
+    margin-right: 20px;
+}
