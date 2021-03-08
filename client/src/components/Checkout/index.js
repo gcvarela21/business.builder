@@ -12,9 +12,7 @@ function Checkout(props) {
                         <h4 className="card-title">{props.itemName}</h4>
                         <p className="card-title">{props.itemDesc}</p>
                         <img src={props.itemImg} alt="baked good" />
-                        <p style={{ float: "right" }} className="card-text"><strong>Quantity: </strong>{props.itemQuantity}<br /><strong>Total: </strong>${props.itemPrice}</p>
-
-
+                        <p style={{ float: "right" }} className="card-text"><strong>Quantity: </strong>{props.itemQuantity}<br /><strong>Total: </strong>${props.itemPriceCent}</p>
                     </div>
                 </div>
             </div>
