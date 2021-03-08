@@ -5,14 +5,28 @@ import API from "../utils/API";
 
 function CartCheckout() {
     const [cartItems, setCartItems] = useState([]);
+    const [cartItemInfo, setCartItemInfo] = useState([])
 
+    var localArr = []
     useEffect(() => {
         getMyCartItems()
         // .then
     }, [])
 
+    useEffect(() => {
+        if (cartItemInfo[0] && localArr[0]) {
+            console.log(localArr)
+            for (var k = 0; k < cartItemInfo.length; k++) {
+                console.log(cartItemInfo)
+                setCartItemInfo([...cartItemInfo, { ...cartItemInfo[k], "itemQuantity": [localArr[k].itemQuantity.value] }])
+            }
+        }
+
+    }, [cartItemInfo])
+
     function getMyCartItems() {
-        var holderArr = []
+
+        var itemInfoArr = []
         for (var i = 0; i < localStorage.length; i++) {
             // gets itemID and quantity from local storage
             var key = window.localStorage.key(i);
@@ -20,31 +34,21 @@ function CartCheckout() {
 
             // console.log(key)
             // console.log(value)
+
             // look for itemInfo from the key in local storage
-            holderArr.push({ "itemID": key, "itemQuantity": value })
+            localArr.push({ "itemID": JSON.parse(key), "itemQuantity": JSON.parse(value) })
         }
-        for (var j = 0; j < holderArr.length; j++) {
-            // console.log(holderArr)
-            API.getItem(holderArr[j].itemID)
-                .then(res => holderArr[j] = (res.data))
+        for (var j = 0; j < localArr.length; j++) {
+            API.getItem(localArr[j].itemID)
+                .then(res => setCartItemInfo([...cartItemInfo, res.data]))
         }
-        // console.log(holderArr)
-        // i want to add item quantity (from local) + desc, title, id, img to holderArr 
-        // E.G.
-        // [    
-        // {itemQuantity: 5
-        // itemName: cOOKIE
-        // itemDesc: ITS GOOD}
-        // ]
-        // console.log(holderArr)
-        return setCartItems(holderArr)
+
+        console.log(cartItemInfo)
+
+        return setCartItems(localArr)
 
     }
-    // THIS KINDA WORKED IDK
-    // API.getItem(key)
-    //     .then(res => holderArr.push({ [key]: res.data.key, "itemQuantity": value }))
-    //     .catch(err => console.log(err));
-    console.log(cartItems)
+
     return (
         <>
             {/* make api call to get itemID info, append to page, calculate sum, add checkout button */}

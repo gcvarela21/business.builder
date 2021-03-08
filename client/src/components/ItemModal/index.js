@@ -7,11 +7,20 @@ function ItemModal(props) {
     function addToLocal(event) {
 
         var itemQuantity = document.getElementById([props.id]).value
-        console.log(event.target.id)
-        localStorage.setItem(JSON.stringify(props.id), JSON.stringify(itemQuantity));
-
         // var itemQuantity = event.target.value
         // localStorage.setItem(JSON.stringify(props.id), JSON.stringify(itemQuantity));
+        var itemInfo = {
+            id: props.id,
+            itemQuantity: parseInt(itemQuantity),
+            itemName: props.itemName,
+            itemDesc: props.itemDesc,
+            itemImg: props.itemImg,
+            itemPrice: props.itemPrice
+        }
+
+        localStorage.setItem(props.id, JSON.stringify(itemInfo));
+
+        console.log(JSON.parse(localStorage.getItem(7)))
     }
 
     return (
