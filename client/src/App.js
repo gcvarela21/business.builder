@@ -8,7 +8,10 @@ import Gallery from "./pages/Gallery.js";
 import Login from "./pages/Login.js";
 import About from "./pages/About.js";
 import CartCheckout from "./pages/CartCheckout.js";
+import Admin from "./pages/Admin.js";
+
 // Make sure to call `loadStripe` outside of a component’s render to avoid recreating the `Stripe` object on every render.
+
 
 function App() {
   // success/failure message
@@ -41,7 +44,9 @@ function App() {
         <Route exact path="/gallery" component={Gallery} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/cart" component={CartCheckout} />
         <Route exact path="/cart" render={(props) => (<CartCheckout {...props} handleClick={true} />)} />
+        <Route exact path={["/admin", "/admin/:itemCategory"]} component={Admin} />
       </Router>
     </>
   );
