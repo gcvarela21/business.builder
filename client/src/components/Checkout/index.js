@@ -13,6 +13,7 @@ function Checkout(props) {
                         <p className="card-text">${props.itemPrice}</p>
 
                         <img src={props.itemImg} alt="baked good" />
+                        <button className="btn btn-primary" onClick={() => props.handleClick()}></button>
                     </div>
                 </div>
             </div>
