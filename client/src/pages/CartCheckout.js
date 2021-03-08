@@ -6,7 +6,6 @@ import StripeUtil from "../utils/StripeUtil";
 
 
 function CartCheckout(props) {
-    const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
     const [cartItems, setCartItems] = useState([]);
     // function that takes in cart items to sum them
 

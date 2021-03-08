@@ -14,11 +14,7 @@ const stripeUtil = {
             .catch(function (err) {
                 console.log(err)
             })
-        // console.log(response)
-        // const response = await fetch("/create-checkout-session", {
-        //     method: "POST",
-        //     body: JSON.stringify({ cartItems: cartItems })
-        // });
+
         // console.log(cartItems)
         // const session = await response.json();
         // When the customer clicks on the button, redirect them to Checkout.
