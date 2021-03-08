@@ -9,8 +9,11 @@ function Checkout(props) {
                     <div className="card-body">
                         <h5 className="card-title">{props.itemName}</h5>
                         <h5 className="card-title">{props.itemDesc}</h5>
-                        <p className="card-text">{props.itemPrice}</p>
+                        <p className="card-text">Amount: {props.itemQuantity}</p>
+                        <p className="card-text">${props.itemPrice}</p>
+
                         <img src={props.itemImg} alt="baked good" />
+                        <button className="btn btn-primary" onClick={() => props.handleClick()}></button>
                     </div>
                 </div>
             </div>
