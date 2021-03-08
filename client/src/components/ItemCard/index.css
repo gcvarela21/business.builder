@@ -1,0 +1,17 @@
+.btn-primary {
+    position: absolute;
+    right:    0;
+    bottom:   0;
+    margin: 8px;
+}
+
+.card {
+    margin: 10px;
+    border: transparent;
+}
+
+img {
+    max-height: 275px;
+    max-width: 200;
+    overflow: hidden;
+}
