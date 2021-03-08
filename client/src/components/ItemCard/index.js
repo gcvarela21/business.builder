@@ -1,5 +1,6 @@
 import React from "react";
 import ItemModal from "../ItemModal";
+import "./index.css"
 
 function ItemCard(props) {
 
