@@ -50,3 +50,7 @@ img {
     font-size: 16px;
     padding: 16px 32px;
   }
+
+  .item-card-title, .item-card-text {
+    text-align: center;
+  }

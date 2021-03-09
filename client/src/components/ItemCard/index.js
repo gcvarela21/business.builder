@@ -14,9 +14,9 @@ function ItemCard(props) {
                 </div>
 
                 <div className="card-body">
-                    <h5 className="card-title">{props.itemName}</h5>
-                    <p>{props.itemDesc}</p>
-                    <p className="card-text">${props.itemPrice}</p>
+                    <h5 className="item-card-title">{props.itemName}</h5>
+                    {/* <p>{props.itemDesc}</p> */}
+                    <p className="item-card-text">${props.itemPrice}</p>
 
                 </div>
             </div>

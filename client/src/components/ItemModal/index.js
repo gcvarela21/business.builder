@@ -4,12 +4,12 @@ import iziToast from 'izitoast';
 
 function ItemModal(props) {
 
-    function toast() {
-        iziToast.success({
-            title: 'OK',
-            message: 'Successfully inserted record!',
-        });
-    }
+    // function toast() {
+    //     iziToast.success({
+    //         title: 'OK',
+    //         message: 'Successfully inserted record!',
+    //     });
+    // }
 
     function addToLocal(event) {
 
@@ -45,7 +45,7 @@ function ItemModal(props) {
                         <form onSubmit={(event) => {
                             event.preventDefault()
                             addToLocal(event)
-                            toast()
+                            // toast()
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label">QUANTITY</label>
