@@ -1,8 +1,15 @@
 import React from "react";
-
+import iziToast from 'izitoast';
 
 
 function ItemModal(props) {
+
+    // function toast() {
+    //     iziToast.success({
+    //         title: 'OK',
+    //         message: 'Successfully inserted record!',
+    //     });
+    // }
 
     function addToLocal(event) {
 
@@ -21,7 +28,6 @@ function ItemModal(props) {
 
         localStorage.setItem(props.id, JSON.stringify(itemInfo));
 
-        console.log(JSON.parse(localStorage.getItem(7)))
     }
 
     return (
@@ -39,6 +45,7 @@ function ItemModal(props) {
                         <form onSubmit={(event) => {
                             event.preventDefault()
                             addToLocal(event)
+                            // toast()
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label">QUANTITY</label>

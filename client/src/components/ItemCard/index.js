@@ -7,17 +7,17 @@ function ItemCard(props) {
     return (
         <>
 
-            <div className="card container" style={{ width: 300 }}>
+            <div className="card ha" style={{ width: 300 }}>
                 <img src={props.itemImg} className="card-img-top item-image" alt="..." />
                 <div className="middle">
-                    <div className="text">View</div>
+                    <div className="text" data-bs-toggle="modal" data-bs-target={"#a" + props.id}>View</div>
                 </div>
 
                 <div className="card-body">
-                    <h5 className="card-title">{props.itemName}</h5>
-                    <p>{props.itemDesc}</p>
-                    <p className="card-text">${props.itemPrice}</p>
-                    <button className="btn btn-primary" data-bs-toggle="modal" data-bs-target={"#a" + props.id}>View</button>
+                    <h5 className="item-card-title">{props.itemName}</h5>
+                    {/* <p>{props.itemDesc}</p> */}
+                    <p className="item-card-text">${props.itemPrice}</p>
+
                 </div>
             </div>
             <ItemModal
