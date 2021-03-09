@@ -19,15 +19,15 @@ function Admin() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <h2 className="col-12">Welcome Danielle!</h2>
-                    <p className="col-12">Select a category to edit or up date:</p>
-                    <div>
+                    <h2 className="col-12 d-flex justify-content-center">Welcome Danielle!</h2>
+                    <p className="col-12 d-flex justify-content-center">Select a category to edit or up date:</p>
+                    <div className="col-12 d-flex justify-content-center">
                         <a className="" href="/admin/cakes">Cakes</a>
                         <a className="" href="/admin/cookies">Cookies</a>
                         <a className="" href="/admin/special_treats">Pastries</a>
                     </div>
                 </div>
-                <form className="row">
+                <div className="row">
                     {items.map((item, index) => {
                         return (<FormCard
                             id={item.id}
@@ -39,7 +39,7 @@ function Admin() {
                             itemImg={item.itemImg}
                         />)
                     })}
-                </form>
+                </div>
             </div>
         </>
     )
