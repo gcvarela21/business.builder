@@ -28,7 +28,7 @@ function Header() {
                         }}>
                         </i>
                         <a className="cart" href="/cart">
-                            <p>Cart({checkCart()})</p>
+                            <p >Cart({checkCart()})</p>
                         </a>
 
                     </div>

@@ -34,7 +34,7 @@ function CartCheckout() {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="container">
                 {cartItems.map((cart, index) => {
 
                     return <CheckoutCard
@@ -51,7 +51,7 @@ function CartCheckout() {
 
                 })}
 
-                <button className="btn btn-primary" onClick={() => handleClick()}>Checkout and Pay</button>
+                <button className="btn btn-primary checkout-btn" onClick={() => handleClick()}>Checkout and Pay</button>
             </div>
         </>
     )
