@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import API from "../utils/API";
 
 function CheckoutSuccess() {
 
@@ -7,16 +8,32 @@ function CheckoutSuccess() {
     useEffect(() => {
         getMyCartItems()
     }, [])
+
     // recieves list of purchased items from local storage
+    var localArr = []
     function getMyCartItems() {
         var keyArr = Object.keys(localStorage)
         for (var i = 0; i < keyArr.length; i++) {
             var value = JSON.parse(window.localStorage.getItem(keyArr[i]));
             localArr.push(value)
         }
-        setBoughtItems(localArr)
+        pushCartToDB(localArr)
     }
+    console.log(boughtItems)
 
+    // push item id and quantity to db then clears local storage
+    function pushCartToDB(boughtItems) {
+        // API.createOrder
+        for (var i = 0; i < boughtItems.length; i++) {
+            var itemData = {
+                ItemId: boughtItems[i].id,
+                quantity: boughtItems[i].itemQuantity
+            }
+            console.log(itemData)
+            API.createOrderItem(itemData)
+        }
+        localStorage.clear();
+    }
 
 
     return (

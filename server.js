@@ -43,7 +43,7 @@ app.post('/create-checkout-session', async (req, res) => {
         line_items: stripeLineItem,
         mode: 'payment',
         success_url: `${YOUR_DOMAIN}/success`,
-        cancel_url: `${YOUR_DOMAIN}/canceled`,
+        cancel_url: `${YOUR_DOMAIN}/cancelled`,
     });
     res.json({ id: session.id });
 });

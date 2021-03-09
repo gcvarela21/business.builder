@@ -8,7 +8,7 @@ import Gallery from "./pages/Gallery.js";
 import Login from "./pages/Login.js";
 import About from "./pages/About.js";
 import Checkout from "./pages/Checkout.js";
-import Checkout from "./pages/Checkout.js";
+import Admin from "./pages/Admin.js";
 import CheckoutSuccess from "./pages/CheckoutSuccess.js";
 import CheckoutCancelled from "./pages/CheckoutCancelled.js";
 
