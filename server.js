@@ -64,14 +64,13 @@ db.sequelize.sync().then(function () {
 // sun todo
 
 // client-side 
-    // 2. learn how stripe works and react calendar
+    // 2. react calendar
     // 2. build admin page (change, delete, and create button)
-    // 3. when home component mounts (useeffect) uses run utility on homepage ----------- localstorage.length
     // 4. add izitoast notificaitons to modal and on submit close the modal when user inputs quantity
 
 // server
 
 
-
-// questions for jerome
-    // how do we know if payment was sent - how do we know if they actually completed the transaction? i cant push patron info/itemid+cart until its confirmed they paid
+// create disclamer to tell customer about our pickup options (top of each page and in item modal and checkout)
+// create dropdown with info about pickup date and location friday - bakery, sat and sun - speakeasy brewery
+// add pickup info to local storage
