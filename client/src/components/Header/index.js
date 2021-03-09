@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import iziToast from 'izitoast';
+
+function checkCart() {
+    var cartNum = localStorage.length
+    return cartNum
+}
 
 function Header() {
 
@@ -23,7 +28,7 @@ function Header() {
                         }}>
                         </i>
                         <a href="/cart">
-                            <p className="cart">Cart</p>
+                            <p className="cart">Cart({checkCart()})</p>
                         </a>
 
                     </div>

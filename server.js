@@ -42,8 +42,8 @@ app.post('/create-checkout-session', async (req, res) => {
         payment_method_types: ['card'],
         line_items: stripeLineItem,
         mode: 'payment',
-        success_url: `${YOUR_DOMAIN}?success=true`,
-        cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+        success_url: `${YOUR_DOMAIN}/success`,
+        cancel_url: `${YOUR_DOMAIN}/cancelled`,
     });
     res.json({ id: session.id });
 });
@@ -64,7 +64,6 @@ db.sequelize.sync().then(function () {
 // sun todo
 
 // client-side 
-    // 1. checkout/cart page >-> sends local storage to DB and clears local storage
     // 2. learn how stripe works and react calendar
     // 2. build admin page (change, delete, and create button)
     // 3. when home component mounts (useeffect) uses run utility on homepage ----------- localstorage.length

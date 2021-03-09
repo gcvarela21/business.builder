@@ -1,40 +1,43 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
-import Checkout from "../components/Checkout"
-import { loadStripe } from "@stripe/stripe-js";
+import CheckoutCard from "../components/CheckoutCard"
 import StripeUtil from "../utils/StripeUtil";
 
 
-function CartCheckout(props) {
+function CartCheckout() {
     const [cartItems, setCartItems] = useState([]);
     // function that takes in cart items to sum them
 
-    var localArr = []
+
     useEffect(() => {
         getMyCartItems()
     }, [])
 
+    var localArr = []
+
     // puts local storage cart-item info into an array so we can pass it as props
     function getMyCartItems() {
-        localArr = []
-        for (var i = 0; i < localStorage.length; i++) {
-            var value = JSON.parse(window.localStorage.getItem(localStorage.key(i)));
+
+        var keyArr = Object.keys(localStorage)
+        for (var i = 0; i < keyArr.length; i++) {
+            var value = JSON.parse(window.localStorage.getItem(keyArr[i]));
             localArr.push(value)
         }
-        console.log(localArr)
-        return setCartItems(localArr)
+        setCartItems(localArr)
     }
 
     // stripe stuff to whisk the patron away
     const handleClick = async () => {
-        StripeUtil.stripeCheckout(cartItems)
+        var stripeID = StripeUtil.stripeCheckout(cartItems)
+        console.log(stripeID)
     };
 
     return (
         <>
             <div className="container-fluid">
                 {cartItems.map((cart, index) => {
-                    return (<Checkout
+
+                    return <CheckoutCard
                         id={cart.id}
                         key={index}
                         itemName={cart.itemName}
@@ -44,8 +47,10 @@ function CartCheckout(props) {
                         itemImg={cart.itemImg}
                         itemQuantity={cart.itemQuantity}
                         handleClick={handleClick}
-                    />)
+                    />
+
                 })}
+
                 <button className="btn btn-primary" onClick={() => handleClick()}>Checkout and Pay</button>
             </div>
         </>

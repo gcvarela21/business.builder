@@ -22,12 +22,12 @@ var axiosCalls = {
         return axios.post("/api/item", itemData);
     },
 
-    createPatron: function (itemData) {
-        return axios.post("/api/patron", itemData);
+    createOrder: function (itemData) {
+        return axios.post("/api/order", itemData);
     },
 
-    createOrder: function (itemData) {
-        return axios.post("/api/patronItem", itemData);
+    createOrderItem: function (itemData) {
+        return axios.post("/api/orderItem", itemData);
     }
 
 };
