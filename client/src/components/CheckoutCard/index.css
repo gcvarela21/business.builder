@@ -5,3 +5,13 @@
 .card-text{
     float: right;
 }
+
+.imgLeft {
+    margin-right: 20px;
+}
+
+.checkout-card {
+    position:absolute;
+    bottom:0;
+    right:0;
+}

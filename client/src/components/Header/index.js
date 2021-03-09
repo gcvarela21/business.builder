@@ -27,8 +27,8 @@ function Header() {
                             toast()
                         }}>
                         </i>
-                        <a href="/cart">
-                            <p className="cart">Cart({checkCart()})</p>
+                        <a className="cart" href="/cart">
+                            <p>Cart({checkCart()})</p>
                         </a>
 
                     </div>
