@@ -36,6 +36,9 @@ img {
     text-align: center;
   }
 
+  .ha:hover .item-image {
+    opacity: 0.3;
+  }
 
   .ha:hover .middle {
     opacity: 1;
