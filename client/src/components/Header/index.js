@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Header.css";
+import iziToast from 'izitoast';
 
 function checkCart() {
     var cartNum = localStorage.length
@@ -7,12 +8,25 @@ function checkCart() {
 }
 
 function Header() {
+
+    function toast() {
+        console.log("hi")
+        console.log(iziToast)
+        iziToast.success({
+            title: 'OK',
+            message: 'Successfully inserted record!',
+        });
+    }
+
     return (
         <>
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
-                        <i className="fas fa-user-alt pro"></i>
+                        <i className="fas fa-user-alt pro" onClick={() => {
+                            toast()
+                        }}>
+                        </i>
                         <a href="/cart">
                             <p className="cart">Cart({checkCart()})</p>
                         </a>

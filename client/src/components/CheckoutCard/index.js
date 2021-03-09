@@ -15,7 +15,6 @@ function Checkout(props) {
             <div className="container">
                 <div className="card">
                     <div className="card-body">
-
                         <h4 className="card-title">{props.itemName}</h4>
                         <p className="card-title">{props.itemDesc}</p>
                         <img src={props.itemImg} alt="baked good" />

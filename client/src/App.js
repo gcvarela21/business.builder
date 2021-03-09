@@ -9,8 +9,12 @@ import Login from "./pages/Login.js";
 import About from "./pages/About.js";
 import Checkout from "./pages/Checkout.js";
 import Admin from "./pages/Admin.js";
+import Contact from "./pages/Contact"
+
+
 import CheckoutSuccess from "./pages/CheckoutSuccess.js";
 import CheckoutCancelled from "./pages/CheckoutCancelled.js";
+
 
 function App() {
 
@@ -28,6 +32,7 @@ function App() {
         <Route exact path="/checkout/success" component={CheckoutSuccess} />
         <Route exact path="/checkout/cancelled" component={CheckoutCancelled} />
         <Route exact path={["/admin", "/admin/:itemCategory"]} component={Admin} />
+        <Route exact path="/contact" component={Contact} />
       </Router>
     </>
   );
