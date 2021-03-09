@@ -40,7 +40,7 @@ function ItemModal(props) {
                     </div>
                     <div className="modal-body">
                         <img alt="baked item" src={props.itemImg}></img>
-                        <p>{props.itemDesc}</p>
+                        <p className="modal-text">{props.itemDesc}</p>
                         <p>Price: ${props.itemPrice}</p>
                         <form onSubmit={(event) => {
                             event.preventDefault()

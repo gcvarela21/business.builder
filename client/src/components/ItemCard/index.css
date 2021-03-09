@@ -16,13 +16,15 @@ img {
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
+    /* border: solid 1px; */
+    padding: 1px;
   }
 
   .middle {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
-    top: 27%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -42,8 +44,12 @@ img {
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    border-radius: 10px;
+    font-family: 'Quicksand', sans-serif;
   }
 
   .item-card-title, .item-card-text {
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
   }
