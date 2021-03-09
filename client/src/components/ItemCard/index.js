@@ -7,7 +7,7 @@ function ItemCard(props) {
     return (
         <>
 
-            <div className="card container" style={{ width: 300 }}>
+            <div className="card ha" style={{ width: 300 }}>
                 <img src={props.itemImg} className="card-img-top item-image" alt="..." />
                 <div className="middle">
                     <div className="text">View</div>

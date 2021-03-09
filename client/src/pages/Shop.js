@@ -45,7 +45,7 @@ function Shop() {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="container" style={{ marginLeft: "auto", marginRight: "auto" }}>
                 <div className="row">
                     {items.map((item, index) => {
                         return (<ItemCard

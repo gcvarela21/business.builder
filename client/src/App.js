@@ -9,6 +9,7 @@ import Login from "./pages/Login.js";
 import About from "./pages/About.js";
 import CartCheckout from "./pages/CartCheckout.js";
 import Admin from "./pages/Admin.js";
+import Contact from "./pages/Contact"
 
 // Make sure to call `loadStripe` outside of a component’s render to avoid recreating the `Stripe` object on every render.
 
@@ -47,6 +48,7 @@ function App() {
         <Route exact path="/cart" component={CartCheckout} />
         <Route exact path="/cart" render={(props) => (<CartCheckout {...props} handleClick={true} />)} />
         <Route exact path={["/admin", "/admin/:itemCategory"]} component={Admin} />
+        <Route exact path="/contact" component={Contact} />
       </Router>
     </>
   );
