@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import API from "../utils/API";
+const Stripe = require('stripe');
+const stripe = Stripe('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 function CheckoutSuccess() {
 
@@ -33,6 +35,8 @@ function CheckoutSuccess() {
             API.createOrderItem(itemData)
         }
         localStorage.clear();
+        // var customer = await stripe.customers.create();
+        // console.log(customer.lastResponse.requestId);
     }
 
 

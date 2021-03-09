@@ -8,9 +8,9 @@ const stripeUtil = {
         return axios.post("/create-checkout-session", { cartItems })
             .then(async function (data) {
                 console.log(data)
-                // const result = await stripe.redirectToCheckout({
-                //     sessionId: data.data.id,
-                // });
+                const result = await stripe.redirectToCheckout({
+                    sessionId: data.data.id,
+                });
             })
             .catch(function (err) {
                 console.log(err)
