@@ -28,7 +28,8 @@ function CartCheckout() {
 
     // stripe stuff to whisk the patron away
     const handleClick = async () => {
-        StripeUtil.stripeCheckout(cartItems)
+        var stripeID = StripeUtil.stripeCheckout(cartItems)
+        console.log(stripeID)
     };
 
     return (

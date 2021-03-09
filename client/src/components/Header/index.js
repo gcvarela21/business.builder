@@ -1,5 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
+
+function checkCart() {
+    var cartNum = localStorage.length
+    return cartNum
+}
 
 function Header() {
     return (
@@ -9,7 +14,7 @@ function Header() {
                     <div className="col-12 d-flex justify-content-end">
                         <i className="fas fa-user-alt pro"></i>
                         <a href="/cart">
-                            <p className="cart">Cart</p>
+                            <p className="cart">Cart({checkCart()})</p>
                         </a>
 
                     </div>

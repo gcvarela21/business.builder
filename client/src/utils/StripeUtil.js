@@ -7,11 +7,15 @@ const stripeUtil = {
         const stripe = await stripePromise;
         return axios.post("/create-checkout-session", { cartItems })
             .then(async function (data) {
-                console.log(data)
+
                 const result = await stripe.redirectToCheckout({
                     sessionId: data.data.id,
                 });
+                return result
             })
+            // cs_test_a1mPGdc0hXeOJIUpgYjO1w9rC7v4hPZh5yvYzyZ0LJhpAcGDuFiBzvjUlU
+            // cs_test_a1qDitBtzZXa5fkJbi1PaEI7VM1ZtLIv0UJhgMp1rE7cHI06dbfNTawK8B
+
             .catch(function (err) {
                 console.log(err)
             })

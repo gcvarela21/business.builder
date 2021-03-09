@@ -12,10 +12,6 @@ import Admin from "./pages/Admin.js";
 import CheckoutSuccess from "./pages/CheckoutSuccess.js";
 import CheckoutCancelled from "./pages/CheckoutCancelled.js";
 
-
-// Make sure to call `loadStripe` outside of a component’s render to avoid recreating the `Stripe` object on every render.
-
-
 function App() {
 
   return (
