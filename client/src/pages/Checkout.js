@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import API from "../utils/API";
 import CheckoutCard from "../components/CheckoutCard"
 import StripeUtil from "../utils/StripeUtil";
 

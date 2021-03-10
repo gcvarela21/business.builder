@@ -33,6 +33,15 @@ var axiosCalls = {
 
     createOrderItem: function (itemData) {
         return axios.post("/api/orderItem", itemData);
+    },
+
+    loginAdmin: function (adminData) {
+        // console.log("axios")
+        return axios.post("/api/user/login", adminData)
+    },
+
+    adminCheck: function () {
+        return axios.get("/api/user/login")
     }
 
 };

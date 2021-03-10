@@ -39,7 +39,7 @@ function NavBar() {
                     </button>
                 </div>
                 <div className="d-flex justify-content-end col-12">
-                    <div id="inBlock" className="collapse" id="navbarToggleExternalContent">
+                    <div id="inBlock navbarToggleExternalContent" className="collapse">
                         <ul id="inBlock" className="">
                             <li className="navItem">
                                 <a className="navLink" aria-current="page" href="/">Home</a>

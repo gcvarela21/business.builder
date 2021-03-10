@@ -7,11 +7,20 @@ import "./Admin.css";
 
 function Admin() {
 
+    // redirect back to login if not logged in
+
     const [items, setItemsDatabase] = useState([]);
 
     const { itemCategory } = useParams();
 
+
+
+
     useEffect(() => {
+        API.adminCheck()
+            .then((res) => {
+                console.log(res)
+            })
         API.getCategory(itemCategory)
             .then(res => setItemsDatabase(res.data))
             .catch(err => console.log(err));
