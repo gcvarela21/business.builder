@@ -1,24 +1,9 @@
 import React from "react";
+import API from "../../utils/API";
 
 import "./index.css";
 
-function FormCard(props) {
-
-    //     return (
-    //         <>
-    //             <div className="card col-4">
-    //                 <img src={props.itemImg} className="card-img-top" alt="..." />
-    //                 <div className="card-body">
-    //                     <h5 className="card-title">{props.itemName}</h5>
-    //                     <p>{props.itemDesc}</p>
-    //                     <p className="card-text">${props.itemPrice}</p>
-    //                     <button className="btn btn-primary">Delete</button>
-    //                 </div>
-    //             </div>
-    //         </>
-    //     )
-    // }
-
+function UpdateForm(props) {
 
     // $(document).on("click", "#Update", function () {
 
@@ -44,7 +29,7 @@ function FormCard(props) {
     // $(document).on("click", "#Delete", function () {
 
     //     $.ajax({
-    //         url: "/api/itemUpdate",
+    //         url: "/api/itemid/                           ",
     //         method: "DELETE",
     //         data: newUser
     //     }).then(function (response) {
@@ -53,6 +38,11 @@ function FormCard(props) {
     //     })
     // })
 
+    function killIt(props) {
+        console.log("killing it!")
+        API.removeItem(props.id)
+    }
+
     return (
         <>
             <div className="row">
@@ -60,15 +50,15 @@ function FormCard(props) {
                 <div id="UpdateForm" className="col-sm-12 col-md-6 d-flex justify-content-center">
                     <form className="row">
                         <div className="col-12 d-flex justify-content-center">
-                            <p id="itemN" for="Name">Item Name:</p>
+                            <p id="itemN">Item Name:</p>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <input type="text" id="Name" name="Name" placeholder={props.itemName} ></input>
+                            <input type="text" id="Name" placeholder={props.itemName} ></input>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <p for="itemDesc" >Item Description:</p>
+                            <p>Item Description:</p>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
@@ -76,7 +66,7 @@ function FormCard(props) {
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <p for="Price">Item Price:</p>
+                            <p>Item Price:</p>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
@@ -84,11 +74,11 @@ function FormCard(props) {
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <p for="Img">Item Image SRC (ex. https//:) :</p>
+                            <p>Item Image SRC (ex. https//:) :</p>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <textarea id="Image" className="imgField" type="text" name="Img" placeholder={props.itemImg}></textarea>
+                            <textarea id="Image" className="imgField" type="text" placeholder={props.itemImg}></textarea>
                         </div>
 
                         <div id="btn-Con" className="col-12 d-flex justify-content-center">
@@ -97,7 +87,7 @@ function FormCard(props) {
                                     <button id="itemUpdate" className="btn btn-secondary">Update</button>
                                 </div>
                                 <div className="col-6 d-flex justify-content-center">
-                                    <button id="Delete" className="btn btn-secondary">Delete</button>
+                                    <button onClick={(event) => { event.preventDefault(); killIt(props); }} id="Delete" className="btn btn-secondary">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -109,4 +99,4 @@ function FormCard(props) {
     )
 }
 
-export default FormCard;
+export default UpdateForm;
