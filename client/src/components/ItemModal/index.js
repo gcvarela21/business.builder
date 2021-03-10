@@ -6,16 +6,16 @@ import "./index.css"
 
 function ItemModal(props) {
 
-//    function notieAlert(){
-//     notie.alert({
-//         type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
-//         text: 'Item added to cart!',
-//         stay: false, // optional, default = false
-//         time: 2, // optional, default = 3, minimum = 1,
-//         position: 'top' // optional, default = 'top', enum: ['top', 'bottom']
-//       })}
-  
-  
+    //    function notieAlert(){
+    //     notie.alert({
+    //         type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+    //         text: 'Item added to cart!',
+    //         stay: false, // optional, default = false
+    //         time: 2, // optional, default = 3, minimum = 1,
+    //         position: 'top' // optional, default = 'top', enum: ['top', 'bottom']
+    //       })}
+
+
     function addToLocal(event) {
 
         var itemQuantity = document.getElementById([props.id]).value
@@ -51,6 +51,8 @@ function ItemModal(props) {
                             event.preventDefault()
                             addToLocal(event)
                             // notieAlert()
+                            // eslint-disable-next-line no-restricted-globals
+                            location.reload()
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
