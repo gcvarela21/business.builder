@@ -46,21 +46,3 @@ function Home() {
 }
 
 export default Home;
-
-
-{/* <div classNameName="container">
-<div classNameName="row">
-    <div className="col-sm">
-        <img src="https://hosting.photobucket.com/images/i/danielle-m-estrella/IMG_20200926_124223_307.jpg?width=1920&height=1080&fit=bounds" class="img-thumbnail" alt="..."></img>
-    </div>
-    <div className="col-sm">
-        <img src="https://hosting.photobucket.com/images/i/danielle-m-estrella/20201014_103120_HDR.jpg?width=1920&height=1080&fit=bounds" class="img-thumbnail" alt="..."></img>
-    </div>
-    <div className="col-sm">
-        <img src="https://hosting.photobucket.com/images/i/danielle-m-estrella/IMG_20200206_112851_547.jpg?width=1920&height=1080&fit=bounds" class="img-thumbnail" alt="..."></img>
-    </div>
-    <div className="col-sm">
-        <img src="https://hosting.photobucket.com/images/i/danielle-m-estrella/IMG_20201119_105550_754.jpg?width=1920&height=1080&fit=bounds" class="img-thumbnail" alt="..."></img>
-    </div>
-</div>
-</div> */}

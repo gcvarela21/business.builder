@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import API from "../utils/API";
-const Stripe = require('stripe');
-const stripe = Stripe('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
 
 function CheckoutSuccess() {
-
-    const [boughtItems, setBoughtItems] = useState([]);
 
     useEffect(() => {
         getMyCartItems()
@@ -21,7 +17,6 @@ function CheckoutSuccess() {
         }
         pushCartToDB(localArr)
     }
-    console.log(boughtItems)
 
     // push item id and quantity to db then clears local storage
     function pushCartToDB(boughtItems) {

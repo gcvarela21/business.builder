@@ -61,16 +61,17 @@ db.sequelize.sync().then(function () {
     });
 });
 
-// sun todo
 
 // client-side 
     // 2. react calendar
     // 2. build admin page (change, delete, and create button)
     // 4. add izitoast notificaitons to modal and on submit close the modal when user inputs quantity
 
-// server
-
 
 // create disclamer to tell customer about our pickup options (top of each page and in item modal and checkout)
 // create dropdown with info about pickup date and location friday - bakery, sat and sun - speakeasy brewery
 // add pickup info to local storage
+
+// peter
+// work on usertable
+// get login to work
