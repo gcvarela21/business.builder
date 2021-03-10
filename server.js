@@ -74,3 +74,9 @@ db.sequelize.sync().then(function () {
 // create disclamer to tell customer about our pickup options (top of each page and in item modal and checkout)
 // create dropdown with info about pickup date and location friday - bakery, sat and sun - speakeasy brewery
 // add pickup info to local storage
+
+
+// -Add the hard coded description
+// -About Page
+// -Finish Editing the Modal
+// -izitoast
