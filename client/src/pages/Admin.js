@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import API from "../utils/API";
-import FormCard from "../components/FormCard";
+import CreateItem from "../components/CreateItem";
+import UpdateForm from "../components/UpdateForm";
+import "./Admin.css";
 
 function Admin() {
 
@@ -19,17 +21,28 @@ function Admin() {
         <>
             <div className="container-fluid">
                 <div className="row">
-                    <h2 className="col-12">Welcome Danielle!</h2>
-                    <p className="col-12">Select a category to edit or up date:</p>
-                    <div>
-                        <a className="" href="/admin/cakes">Cakes</a>
-                        <a className="" href="/admin/cookies">Cookies</a>
-                        <a className="" href="/admin/special_treats">Pastries</a>
+                    <h1 id="welcome" className="col-12 d-flex justify-content-center">Welcome Danielle!</h1>
+                </div>
+                <div className="row">
+                    <div className="col-12 d-flex justify-content-center">
+                        <h3>Create A New Shop Item Here</h3>
+                    </div>
+                    <div className="col-12 d-flex justify-content-center CF-Container">
+                        <CreateItem />
                     </div>
                 </div>
-                <form className="row">
+                <div className="row">
+                    <h3 className="col-12 d-flex justify-content-center">Update or Remove A Shop Item Here</h3>
+                    <h5 className="col-12 d-flex justify-content-center">Click On A Category Yould Like To Edit From:</h5>
+                    <div className="col-12 d-flex justify-content-center">
+                        <a className="updateNav" href="/admin/cakes">Cakes</a>
+                        <a className="updateNav" href="/admin/cookies">Cookies</a>
+                        <a className="updateNav" href="/admin/special_treats">Pastries</a>
+                    </div>
+                </div>
+                <div className="row">
                     {items.map((item, index) => {
-                        return (<FormCard
+                        return (<UpdateForm
                             id={item.id}
                             key={index}
                             itemName={item.itemName}
@@ -39,7 +52,7 @@ function Admin() {
                             itemImg={item.itemImg}
                         />)
                     })}
-                </form>
+                </div>
             </div>
         </>
     )

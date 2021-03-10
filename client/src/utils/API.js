@@ -14,7 +14,12 @@ var axiosCalls = {
         return axios.get("/api/item/" + itemCategory);
     },
 
-    deleteItem: function (id) {
+    deleteItem: function (itemName) {
+        console.log("delete item API.js bro!")
+        return axios.delete("/api/item", itemName);
+    },
+    removeItem: function (id) {
+
         return axios.delete("/api/itemid/" + id);
     },
 

@@ -30,5 +30,11 @@ module.exports = {
     db.Item.destroy({ where: { id: req.params.id } })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  deleteItem: function (req, res) {
+    console.log("item controller working")
+    db.Item.destroy({ where: { itemName: req.body.itemName } })
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
   }
 };
