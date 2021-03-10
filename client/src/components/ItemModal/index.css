@@ -21,17 +21,18 @@ padding: 5px;
 
 }
 
-.btn-dark {
+.btn-dark, .btn-pickup {
 margin-left: auto;
 margin-right: auto;
 display: block;
 margin-top: 10px;
 
+
 }
 
-.btn-dark: hover {
+/* .btn-dark: hover {
     color: green;
-}
+} */
 
 
 .modal-text{
@@ -47,3 +48,6 @@ margin-top: 10px;
     position: absolute;
 } */
 
+.pickup-text{
+    font-style: italic;
+}
