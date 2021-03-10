@@ -1,3 +1,36 @@
-.descriptionField {
-     width: 90px; height: 390px; border: 1px solid #999999; padding: 5px;
+#UpdateForm{
+     
+     border-style: solid;
+     border-width: 1px;
+     border-color: black;
+     margin-top: 50px;
+}
+
+input {
+     width: 400px;
+     border-style: solid;
+     border-width: 1px;
+     border-color:  rgb(238, 196, 58);
+    
+}
+
+p {
+     padding-top: 10px;
+}
+
+.descriptionField, .imgField {
+     width: 400px; 
+     height: 150px;     
+     border-style: solid;
+     border-width: 1px;
+     border-color: rgb(238, 196, 58);
      }
+
+#itemN {
+     padding-top: 20px;
+}
+
+#btn-Con {
+     padding-top: 15px;
+     padding-bottom: 20px;
+}

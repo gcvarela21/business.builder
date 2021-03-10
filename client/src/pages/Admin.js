@@ -22,9 +22,9 @@ function Admin() {
                     <h2 className="col-12 d-flex justify-content-center">Welcome Danielle!</h2>
                     <p className="col-12 d-flex justify-content-center">Select a category to edit or up date:</p>
                     <div className="col-12 d-flex justify-content-center">
-                        <a className="" href="/admin/cakes">Cakes</a>
-                        <a className="" href="/admin/cookies">Cookies</a>
-                        <a className="" href="/admin/special_treats">Pastries</a>
+                        <a className="updateNav" href="/admin/cakes">Cakes</a>
+                        <a className="updateNav" href="/admin/cookies">Cookies</a>
+                        <a className="updateNav" href="/admin/special_treats">Pastries</a>
                     </div>
                 </div>
                 <div className="row">
