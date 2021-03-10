@@ -3,6 +3,7 @@ const userController = require("../../controller/userController");
 
 router
     .route("/login")
-    .put(userController.loginUser);
+    .post(userController.loginAdmin)
+    .get(userController.adminCheck);
 
 module.exports = router;

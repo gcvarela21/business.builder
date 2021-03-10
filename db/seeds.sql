@@ -1,6 +1,5 @@
 ---- Admin Login ----
-INSERT INTO Users (username, password); 
-VALUES ("admin", "password");
+INSERT INTO users (username, password) VALUES ("admin", "password");
 
 ---- Items (All) ----
 USE danielle_DB;

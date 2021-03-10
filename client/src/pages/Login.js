@@ -3,14 +3,19 @@ import API from "../utils/API";
 
 function Login() {
 
-    function adminLogIn() {
+    function adminLogIn(event) {
+        event.preventDefault()
         var username = document.getElementById("usernameID").value
         var password = document.getElementById("passwordID").value
         var admin = {
             username: username,
             password: password
         }
+        console.log(admin)
         API.loginAdmin(admin)
+            .then(() => {
+                window.location.replace("/admin");
+            })
     }
 
     return (
@@ -24,7 +29,7 @@ function Login() {
                     <label for="exampleInputPassword1" className="form-label">Password</label>
                     <input type="password" className="form-control" id="passwordID" />
                 </div>
-                <button type="submit" className="btn btn-primary" onClick={(() => { adminLogIn() })}>Submit</button>
+                <button type="submit" className="btn btn-primary" onClick={((event) => { adminLogIn(event) })}>Login</button>
             </form>
         </>
 

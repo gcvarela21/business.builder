@@ -36,7 +36,12 @@ var axiosCalls = {
     },
 
     loginAdmin: function (adminData) {
-        return axios.put("api/user/login", adminData)
+        // console.log("axios")
+        return axios.post("/api/user/login", adminData)
+    },
+
+    adminCheck: function () {
+        return axios.get("/api/user/login")
     }
 
 };
