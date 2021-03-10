@@ -8,14 +8,7 @@ import ItemCard from "../components/ItemCard"
 function Shop() {
 
     const [items, setItemsDatabase] = useState([]);
-    // const [modalInfo, setModalInfo] = useState({});
-
-    // function updateModal(id) {
-    //     console.log(id)
-    //     API.getItem(id)
-    //         .then(res => setModalInfo(res.data))
-    //         .catch(err => console.log(err));
-    // }
+ 
     const { itemCategory } = useParams()
 
     useEffect(() => {
@@ -23,27 +16,6 @@ function Shop() {
             .then(res => setItemsDatabase(res.data))
             .catch(err => console.log(err));
     }, [])
-
-
-    // cart
-    // modal izitoast or notie
-
-    // function showItems() {
-    //     API.getAllItems()
-    //         .then(res => {
-    //             setItemsDatabase(res.data)
-    //         })
-    //         .catch(err => console.log(err))
-    // }
-
-    // OR
-
-    // ADD ITEM TO CART FUNCTION.. connect to button inside modal.
-    // function addItems(id){
-
-    // }
-
-
 
     return (
         <>

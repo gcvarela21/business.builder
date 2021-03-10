@@ -1,17 +1,20 @@
 import React from "react";
-import iziToast from 'izitoast';
+// import notie from "notie";
 import "./index.css"
 
 
 function ItemModal(props) {
 
-    // function toast() {
-    //     iziToast.success({
-    //         title: 'OK',
-    //         message: 'Successfully inserted record!',
-    //     });
-    // }
-
+//    function notieAlert(){
+//     notie.alert({
+//         type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+//         text: 'Item added to cart!',
+//         stay: false, // optional, default = false
+//         time: 2, // optional, default = 3, minimum = 1,
+//         position: 'top' // optional, default = 'top', enum: ['top', 'bottom']
+//       })}
+  
+  
     function addToLocal(event) {
 
         var itemQuantity = document.getElementById([props.id]).value
@@ -46,7 +49,7 @@ function ItemModal(props) {
                         <form onSubmit={(event) => {
                             event.preventDefault()
                             addToLocal(event)
-                            // toast()
+                            // notieAlert()
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
