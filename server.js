@@ -72,6 +72,14 @@ db.sequelize.sync().then(function () {
 // create dropdown with info about pickup date and location friday - bakery, sat and sun - speakeasy brewery
 // add pickup info to local storage
 
+
 // peter
 // work on usertable
 // get login to work
+
+
+// -Add the hard coded description
+// -About Page
+// -Finish Editing the Modal
+// -izitoast
+

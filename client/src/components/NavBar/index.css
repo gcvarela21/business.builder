@@ -10,11 +10,13 @@ a {
 
 .navBar {
     text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .navItem {
     text-decoration: none;
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-right:10px;
 }
 
 .navLink {
@@ -48,6 +50,25 @@ button:visited, button:active {
 }
 
 #navbarDropdownMenuLink {
-    padding: 0px, 0px, 0px,0px;
-    margin-right: 20px;
+    /* padding: 0px, 0px, 0px,0px; */
+    /* margin-right: 20px; */
+}
+
+.dropdown-menu{
+    padding: 5px;
+}
+
+.carousel-inner{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.about-img {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.about {
+    font-family: 'Quicksand', sans-serif;
+    
 }
