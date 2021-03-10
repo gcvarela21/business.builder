@@ -20,7 +20,6 @@ function CheckoutSuccess() {
 
     // push item id and quantity to db then clears local storage
     function pushCartToDB(boughtItems) {
-        // API.createOrder
         for (var i = 0; i < boughtItems.length; i++) {
             var itemData = {
                 ItemId: boughtItems[i].id,
@@ -30,8 +29,6 @@ function CheckoutSuccess() {
             API.createOrderItem(itemData)
         }
         localStorage.clear();
-        // var customer = await stripe.customers.create();
-        // console.log(customer.lastResponse.requestId);
     }
 
 

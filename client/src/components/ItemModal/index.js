@@ -11,12 +11,11 @@ function ItemModal(props) {
     //     });
     // }
 
-    function addToLocal(event) {
+    function addToLocal() {
 
         var itemQuantity = document.getElementById([props.id]).value
-        // var itemQuantity = event.target.value
-        // localStorage.setItem(JSON.stringify(props.id), JSON.stringify(itemQuantity));
         var itemPriceCent = (props.itemPrice) * 100
+
         var itemInfo = {
             id: props.id,
             itemQuantity: parseInt(itemQuantity),
@@ -27,7 +26,6 @@ function ItemModal(props) {
         }
 
         localStorage.setItem(props.id, JSON.stringify(itemInfo));
-
     }
 
     return (

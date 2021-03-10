@@ -15,10 +15,6 @@ import CheckoutCancelled from "./pages/CheckoutCancelled.js";
 
 function App() {
 
-  // if (!isAuthenticated) {
-  //   return <Redirect to="/admin"></Redirect>
-  // }
-
   return (
     <>
       <Router>
@@ -27,7 +23,6 @@ function App() {
         <Route exact path={["/", "/home"]} component={Home} />
         <Route exact path="/shop/:itemCategory" component={Shop} />
         <Route exact path="/gallery" component={Gallery} />
-
         <Route exact path="/about" component={About} />
         <Route exact path="/cart" component={Checkout} />
         <Route exact path="/contact" component={Contact} />
@@ -35,7 +30,6 @@ function App() {
         <Route exact path="/checkout/cancelled" component={CheckoutCancelled} />
         <Route exact path="/login" component={Login} />
         <Route exact path={["/admin", "/admin/:itemCategory"]} component={Admin} />
-
       </Router>
     </>
   );
