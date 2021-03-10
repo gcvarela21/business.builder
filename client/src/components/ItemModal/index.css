@@ -1,3 +1,49 @@
-.modal-text{
+.modal-content{
     font-family: 'Quicksand', sans-serif;
+    
 }
+
+.modal-title{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+   
+
+}
+
+.modal-image{
+margin-left: auto;
+margin-right: auto;
+display: block;
+border: 1px solid black;
+padding: 5px;
+
+}
+
+.btn-dark {
+margin-left: auto;
+margin-right: auto;
+display: block;
+margin-top: 10px;
+
+}
+
+.btn-dark: hover {
+    color: green;
+}
+
+
+.modal-text{
+    text-align: left;
+    padding-top: 5px;
+}
+
+
+/* .btn-primary {
+    background-color: black;
+    color: white;
+    margin: 10px;
+    position: absolute;
+} */
+

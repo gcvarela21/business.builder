@@ -47,8 +47,8 @@ function Shop() {
 
     return (
         <>
-            <div className="container" style={{ marginLeft: "auto", marginRight: "auto" }}>
-                <div className="row">
+            <div className="container">
+                <div className="row justify-content-center">
                     {items.map((item, index) => {
                         return (<ItemCard
                             id={item.id}

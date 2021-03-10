@@ -1,5 +1,6 @@
 import React from "react";
 import iziToast from 'izitoast';
+import "./index.css"
 
 
 function ItemModal(props) {
@@ -36,22 +37,22 @@ function ItemModal(props) {
                 <div className="modal-content">
                     <div className="modal-header">
                         <h3 className="modal-title important">{props.itemName}</h3>
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        {/* <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> */}
                     </div>
                     <div className="modal-body">
-                        <img alt="baked item" src={props.itemImg}></img>
+                        <img className="modal-image" alt="baked item" src={props.itemImg}></img>
                         <p className="modal-text">{props.itemDesc}</p>
-                        <p>Price: ${props.itemPrice}</p>
+                        <p><strong>Price: </strong> ${props.itemPrice}</p>
                         <form onSubmit={(event) => {
                             event.preventDefault()
                             addToLocal(event)
                             // toast()
                         }}>
 
-                            <label htmlFor="exampleInputEmail1" className="form-label">QUANTITY</label>
+                            <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
                             <input type="number" className="form-control" id={props.id}></input>
 
-                            <button type="submit" className="btn btn-primary" >Add To Cart</button>
+                            <button type="submit" className="btn btn-dark" >Add To Cart</button>
                         </form>
                     </div>
                 </div>
