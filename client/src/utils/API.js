@@ -33,6 +33,10 @@ var axiosCalls = {
 
     createOrderItem: function (itemData) {
         return axios.post("/api/orderItem", itemData);
+    },
+
+    loginAdmin: function (adminData) {
+        return axios.put("api/user/login", adminData)
     }
 
 };
