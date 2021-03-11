@@ -23,12 +23,12 @@ function CartCheckout() {
     //         value: "sunday"
     //     }
     // ];
-    
 
-//   function handleChange(e) {
-//     console.log("pickup selected!");
-//     setPickup({ pickup : e.target.value });
-//   }
+
+    //   function handleChange(e) {
+    //     console.log("pickup selected!");
+    //     setPickup({ pickup : e.target.value });
+    //   }
 
     useEffect(() => {
         getMyCartItems()
@@ -46,7 +46,7 @@ function CartCheckout() {
         }
         setCartItems(localArr)
     }
-console.log(cartItems)
+    console.log(cartItems)
     // stripe stuff to whisk the patron away
     const handleClick = async () => {
         var stripeID = StripeUtil.stripeCheckout(cartItems)
@@ -67,19 +67,18 @@ console.log(cartItems)
                         itemCategory={cart.itemCategory}
                         itemImg={cart.itemImg}
                         itemQuantity={cart.itemQuantity}
-                        handleClick={handleClick}
-                    />
+                        handleClick={handleClick} />
 
                 })}
-                 <p className="pickup-text checkout-text"><small><strong>Pickup info: </strong>Orders receieved by Wednesday @ 11:59pm will be available for pickup Fri, Sat, & Sun between the hours of 12-4pm. Any orders received after this time will be availble the following week at the same times. Please use the contact form to inquire about special pickup options or to place orders for pickup more than one week in advance.</small></p>
+                <p className="pickup-text checkout-text"><small><strong>Pickup info: </strong>Orders receieved by Wednesday @ 11:59pm will be available for pickup Fri, Sat, & Sun between the hours of 12-4pm. Any orders received after this time will be availble the following week at the same times. Please use the contact form to inquire about special pickup options or to place orders for pickup more than one week in advance.</small></p>
                 <div className="pickup-checkout">
-               {/* <select id="pickup-day" name="pickup-day">
+                    {/* <select id="pickup-day" name="pickup-day">
                    {pickupOptions.map((option)=> (
             <option value={option.value}>{option.label}</option>
                    ))}
                    </select> */}
-                <br/>
-                <button style={{float: "right"}}className="btn btn-primary checkout-btn" onClick={() => handleClick()}>Checkout and Pay</button>
+                    <br />
+                    <button style={{ float: "right" }} className="btn btn-primary checkout-btn" onClick={() => handleClick()}>Checkout and Pay</button>
                 </div>
             </div>
         </>
@@ -95,4 +94,4 @@ export default CartCheckout;
 <option value="sunday">Sunday @ Speakeasy Brewery SF: 12-4pm</option>
 </select> */}
 
-{/* <select id="pickup-day" name="pickup-day" value={pickup} onChange={handleChange} > */}
+{/* <select id="pickup-day" name="pickup-day" value={pickup} onChange={handleChange} > */ }

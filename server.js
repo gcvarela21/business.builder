@@ -12,7 +12,10 @@ var db = require("./models");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"))
+}
 
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "danielle-bakery", resave: true, saveUninitialized: true }));
