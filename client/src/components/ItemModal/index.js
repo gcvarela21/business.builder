@@ -15,12 +15,17 @@ function ItemModal(props) {
     //         position: 'top' // optional, default = 'top', enum: ['top', 'bottom']
     //       })}
 
+    function handleAddToCart(event) {
+        event.preventDefault()
+        addToLocal(event)
+        // notieAlert()
+        // eslint-disable-next-line no-restricted-globals
+        // location.reload()
+    }
 
-    function addToLocal(event) {
+    function addToLocal() {
 
         var itemQuantity = document.getElementById([props.id]).value
-        // var itemQuantity = event.target.value
-        // localStorage.setItem(JSON.stringify(props.id), JSON.stringify(itemQuantity));
         var itemPriceCent = (props.itemPrice) * 100
         var itemInfo = {
             id: props.id,
@@ -28,13 +33,11 @@ function ItemModal(props) {
             itemName: props.itemName,
             itemDesc: props.itemDesc,
             itemImg: props.itemImg,
-            itemPriceCent: itemPriceCent
+            itemPriceCent: itemPriceCent,
         }
 
         localStorage.setItem(props.id, JSON.stringify(itemInfo));
-
     }
-
     return (
         <div className="modal fade" id={"a" + props.id} aria-hidden="true">
             <div className="modal-dialog">
@@ -48,23 +51,14 @@ function ItemModal(props) {
                         <p className="modal-text">{props.itemDesc}</p>
                         <p><strong>Price: </strong> ${props.itemPrice}</p>
                         <form onSubmit={(event) => {
-                            event.preventDefault()
-                            addToLocal(event)
-                            // notieAlert()
+                            handleAddToCart(event)
                         }}>
 
                             <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
                             <input type="number" className="form-control" id={props.id}></input>
                             <p className="pickup-text"><small><strong>Pickup info: </strong>Orders receieved by Wednesday @ 11:59pm will be available for pickup Fri, Sat, & Sun between the hours of 12-4pm. Any orders received after this time will be availble the following week at the same times. Please use the contact form to inquire about special pickup options or to place orders for pickup more than one week in advance.</small></p>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary btn-pickup dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Select Pickup</button>
-                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                    <li><button class="dropdown-item" type="button" value="Friday">Friday @ SF Bakery Location: 12-4pm </button></li>
-                                    <li><button class="dropdown-item" type="button" value="Saturday">Saturday @ Speakeasy Brewery SF: 12-4pm</button></li>
-                                    <li><button class="dropdown-item" type="button" value="Sunday">Sunday @ Speakeasy Brewery SF: 12-4pm</button></li>
-                                </ul>
-                            </div>
+
+
                             <button type="submit" className="btn btn-dark" >Add To Cart</button>
                         </form>
                     </div>

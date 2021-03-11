@@ -11,6 +11,10 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 1
+        },
+        pickUp: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
 
