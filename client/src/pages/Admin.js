@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import API from "../utils/API";
-import CreateItem from "../components/CreateItem";
-import UpdateForm from "../components/UpdateForm";
+import NewItem from "../components/NewItem";
 import "./Admin.css";
+import DeleteItems from "../components/UpdateForm";
 
 function Admin() {
 
@@ -37,7 +37,7 @@ function Admin() {
                         <h3>Create A New Shop Item Here</h3>
                     </div>
                     <div className="col-12 d-flex justify-content-center CF-Container">
-                        <CreateItem />
+                        <NewItem />
                     </div>
                 </div>
                 <div className="row">
@@ -49,9 +49,9 @@ function Admin() {
                         <a className="updateNav" href="/admin/special_treats">Pastries</a>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row Admin-margin">
                     {items.map((item, index) => {
-                        return (<UpdateForm
+                        return (<DeleteItems
                             id={item.id}
                             key={index}
                             itemName={item.itemName}

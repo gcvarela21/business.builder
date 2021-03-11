@@ -4,7 +4,11 @@ const itemController = require("../../controller/itemController");
 router
     .route("/:id")
     .get(itemController.findItemById)
-    .put(itemController.updateItem)
+    // .put(itemController.updateItem)
     .delete(itemController.removeItem);
+router
+    .route("/:itemName")
+    .put(itemController.updateItem);
+
 
 module.exports = router;

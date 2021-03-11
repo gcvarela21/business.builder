@@ -1,25 +1,23 @@
 import React from "react";
+import API from "../../utils/API";
 import "./index.css";
 
-function CreateItem() {
+function NewItem() {
 
-    // $(document).on("click", "#Update", function () {
-    //     let items = {
-    //         id: $("#ID").val(),
-    //         itemName: $("#Name").val(),
-    //         itemDesc: $("#Desc").val(),
-    //         itemPrice: $("#Price").val(),
-    //         itemImg: $("#Image").val()
-    //     };
-    //     $.ajax({
-    //         url: "/api/itemUpdate",
-    //         method: "POST",
-    //         data: items
-    //     }).then(function (response) {
-    //         // console.log(response);
-    //         // window.location = "/";
-    //     })
-    // })
+    function createITEM() {
+        console.log("creating Item");
+        let itemData = {
+            itemName: document.getElementById("c-Name").value,
+            itemDesc: document.getElementById("c-Desc").value,
+            itemPrice: document.getElementById("c-Price").value,
+            itemImg: document.getElementById("c-Image").value,
+            itemCategory: document.getElementById("c-Category").value
+        }
+
+        console.log(itemData);
+        API.createItem(itemData)
+    }
+
     return (
         <>
             <div className="row">
@@ -27,7 +25,18 @@ function CreateItem() {
                 <div id="CreateItem" className="col-sm-12 col-md-6 d-flex justify-content-center">
                     <form className="row">
                         <div className="col-12 d-flex justify-content-center">
-                            <p id="c-itemN">Item Name:</p>
+                            <p id="c-itemN">Select a Category for Your New Item:</p>
+                        </div>
+
+                        <div className="col-12 d-flex justify-content-center">
+                            <select id="c-Category">
+                                <option value="cakes">Cakes</option>
+                                <option value="cookies">Cookies</option>
+                                <option value="special_treats">Pastries</option>
+                            </select>
+                        </div>
+                        <div className="col-12 d-flex justify-content-center">
+                            <p>Item Name:</p>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
@@ -47,7 +56,7 @@ function CreateItem() {
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
-                            <input type="text" id="c-Price" name="Price" ></input>
+                            <input type="text" id="c-Price" name="c-Price" ></input>
                         </div>
 
                         <div className="col-12 d-flex justify-content-center">
@@ -62,7 +71,9 @@ function CreateItem() {
                             <div className="row">
                                 <div className="col-3 d-flex justify-content-center"></div>
                                 <div className="col-6 d-flex justify-content-center">
-                                    <button id="Create" className="btn btn-secondary">Create</button>
+                                    <button id="Create" className="btn btn-secondary" onClick={(event) => {
+                                        event.preventDefault(); createITEM();
+                                    }} >Create</button>
                                 </div>
                                 <div className="col-3 d-flex justify-content-center"></div>
                             </div>
@@ -75,4 +86,4 @@ function CreateItem() {
     )
 }
 
-export default CreateItem;
+export default NewItem;
