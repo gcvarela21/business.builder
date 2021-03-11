@@ -77,6 +77,13 @@ function CartCheckout() {
             <option value={option.value}>{option.label}</option>
                    ))}
                    </select> */}
+
+                    <select id="pickup-day" name="pickup-day">
+                        <option value="friday">Friday @ SF Bakery Location: 12-4pm</option>
+                        <option value="saturday">Saturday @ Speakeasy Brewery SF: 12-4pm</option>
+                        <option value="sunday">Sunday @ Speakeasy Brewery SF: 12-4pm</option>
+                    </select>
+
                     <br />
                     <button style={{ float: "right" }} className="btn btn-primary checkout-btn" onClick={() => handleClick()}>Checkout and Pay</button>
                 </div>
