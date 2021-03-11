@@ -27,7 +27,6 @@ function ItemModal(props) {
 
         var itemQuantity = document.getElementById([props.id]).value
         var itemPriceCent = (props.itemPrice) * 100
-        console.log(itemPickUpDay)
         var itemInfo = {
             id: props.id,
             itemQuantity: parseInt(itemQuantity),
