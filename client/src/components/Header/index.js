@@ -13,13 +13,9 @@ function Header() {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-12 d-flex justify-content-end">
-                        <i className="fas fa-user-alt pro" onClick={() => {
-                        }}>
-                        </i>
                         <a className="cart" href="/cart">
                             <p >Cart({checkCart()})</p>
                         </a>
-
                     </div>
                 </div>
 
