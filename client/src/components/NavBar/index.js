@@ -16,7 +16,7 @@ function NavBar() {
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a className="dropItem" href="/shop/cakes">Cakes</a></li>
                             <li><a className="dropItem" href="/shop/cookies">Cookies</a></li>
-                            <li><a className="dropItem" href="/shop/special_treats">Special Treats</a></li>
+                            <li><a className="dropItem" href="/shop/special_treats">Pastries</a></li>
                         </ul>
                     </li>
                     <li className="navItem">

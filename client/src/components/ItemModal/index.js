@@ -1,19 +1,18 @@
 import React from "react";
-// import notie from "notie";
+import notie from "notie";
 import "./index.css"
-
-
 
 function ItemModal(props) {
 
-    //    function notieAlert(){
-    //     notie.alert({
-    //         type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
-    //         text: 'Item added to cart!',
-    //         stay: false, // optional, default = false
-    //         time: 2, // optional, default = 3, minimum = 1,
-    //         position: 'top' // optional, default = 'top', enum: ['top', 'bottom']
-    //       })}
+    function notieAlert() {
+        notie.alert({
+            type: 'success', // optional, default = 4, enum: [1, 2, 3, 4, 5, 'success', 'warning', 'error', 'info', 'neutral']
+            text: 'Item added to cart!',
+            stay: false, // optional, default = false
+            time: 2, // optional, default = 3, minimum = 1,
+            position: 'bottom' // optional, default = 'top', enum: ['top', 'bottom']
+        })
+    }
 
     function handleAddToCart(event) {
         event.preventDefault()
@@ -33,7 +32,6 @@ function ItemModal(props) {
             itemImg: props.itemImg,
             itemPriceCent: itemPriceCent,
         }
-
         localStorage.setItem(props.id, JSON.stringify(itemInfo));
     }
     return (
