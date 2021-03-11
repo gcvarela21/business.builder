@@ -19,8 +19,6 @@ function ItemModal(props) {
         event.preventDefault()
         addToLocal(event)
         // notieAlert()
-        // eslint-disable-next-line no-restricted-globals
-        // location.reload()
     }
 
     function addToLocal() {
@@ -57,7 +55,6 @@ function ItemModal(props) {
                             <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
                             <input type="number" className="form-control" id={props.id}></input>
                             <p className="pickup-text"><small><strong>Pickup info: </strong>Orders receieved by Wednesday @ 11:59pm will be available for pickup Fri, Sat, & Sun between the hours of 12-4pm. Any orders received after this time will be availble the following week at the same times. Please use the contact form to inquire about special pickup options or to place orders for pickup more than one week in advance.</small></p>
-
 
                             <button type="submit" className="btn btn-dark" >Add To Cart</button>
                         </form>
