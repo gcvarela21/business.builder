@@ -22,7 +22,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   updateItem: function (req, res) {
-    db.Item.update({ where: { id: req.params.id } }, req.body)
+    db.Item.update({ where: { itemName: req.params.itemName } }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

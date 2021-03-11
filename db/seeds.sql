@@ -1,8 +1,9 @@
+USE danielle_DB;
 ---- Admin Login ----
 INSERT INTO users (username, password) VALUES ("admin", "password");
 
 ---- Items (All) ----
-USE danielle_DB;
+
 INSERT INTO items (itemName, itemCategory, itemDesc, itemPrice, itemImg) VALUES ("O.G. Chocolate Chip", "Cookies", "The original favorite made with a browned butter base, milk chocolate, dark chocolate, topped a sprinkle of flaked salt for savoriness.", 3.00, "https://hosting.photobucket.com/images/i/danielle-m-estrella/IMG_20201029_090329_731.jpg?width=590&height=370&fit=bounds");
 INSERT INTO items (itemName, itemCategory, itemDesc, itemPrice, itemImg) VALUES ("Nutella Stuffed", "Cookies", "If Ferro Roschette could be a cookie, this would be it. A delicious treat with roasted hazelnuts and a creamy Nutella center.", 3.00, "https://hosting.photobucket.com/images/i/danielle-m-estrella/20210227_130831_2(1).jpg?width=590&height=370&fit=bounds");
 INSERT INTO items (itemName, itemCategory, itemDesc, itemPrice, itemImg) VALUES ("Roasted Peanut Toffee", "Cookies", "A cookie with deliciously roasted peanuts, roasted black sesame seeds, toffee, and of course peanut butter.", 3.00, "https://hosting.photobucket.com/images/i/danielle-m-estrella/04D82A60-DA8E-4FC0-9EAD-CA1BB59A4F65.jpeg?width=590&height=370&fit=bounds");

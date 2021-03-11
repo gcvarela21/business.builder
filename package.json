@@ -1,6 +1,9 @@
 {
   "name": "22-business.builder",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.16.0"
+  },
   "description": "Building our community's online presence by generating web-pages for our local small business owners.",
   "main": "server.js",
   "scripts": {
@@ -38,6 +41,7 @@
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "react": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "sequelize": "^6.5.0",
     "stripe": "^8.137.0"
