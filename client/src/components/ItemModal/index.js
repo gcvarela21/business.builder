@@ -27,7 +27,6 @@ function ItemModal(props) {
 
         var itemQuantity = document.getElementById([props.id]).value
         var itemPriceCent = (props.itemPrice) * 100
-        var itemPickUpDay = document.getElementById("pickup-day").value
         console.log(itemPickUpDay)
         var itemInfo = {
             id: props.id,
@@ -36,7 +35,6 @@ function ItemModal(props) {
             itemDesc: props.itemDesc,
             itemImg: props.itemImg,
             itemPriceCent: itemPriceCent,
-            itemPickUpDay: itemPickUpDay
         }
 
         localStorage.setItem(props.id, JSON.stringify(itemInfo));
@@ -60,13 +58,6 @@ function ItemModal(props) {
                             <label htmlFor="exampleInputEmail1" className="form-label"><strong>Enter Quantity: </strong></label>
                             <input type="number" className="form-control" id={props.id}></input>
                             <p className="pickup-text"><small><strong>Pickup info: </strong>Orders receieved by Wednesday @ 11:59pm will be available for pickup Fri, Sat, & Sun between the hours of 12-4pm. Any orders received after this time will be availble the following week at the same times. Please use the contact form to inquire about special pickup options or to place orders for pickup more than one week in advance.</small></p>
-
-
-                            <select id="pickup-day" name="pickup-day">
-                                <option value="friday">Friday @ SF Bakery Location: 12-4pm</option>
-                                <option value="saturday">Saturday @ Speakeasy Brewery SF: 12-4pm</option>
-                                <option value="sunday">Sunday @ Speakeasy Brewery SF: 12-4pm</option>
-                            </select>
 
 
                             <button type="submit" className="btn btn-dark" >Add To Cart</button>

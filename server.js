@@ -46,7 +46,13 @@ app.post('/create-checkout-session', async (req, res) => {
         cancel_url: `${YOUR_DOMAIN}/cancelled`,
     });
     res.json({ id: session.id });
-});
+    try {
+        await returnsPromise()
+    } catch (error) {
+        console.log('That did not go well.')
+        throw error
+    }
+}).catch(e => { console.error(e) });
 
 
 
