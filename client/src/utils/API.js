@@ -15,12 +15,16 @@ var axiosCalls = {
     },
 
     deleteItem: function (itemName) {
-        console.log("delete item API.js bro!")
+        console.log("delete item API.js in use")
         return axios.delete("/api/item", itemName);
     },
     removeItem: function (id) {
 
         return axios.delete("/api/itemid/" + id);
+    },
+    updateItem: function (itemName) {
+        // return axios.put("/api/itemid/:id", id);
+        return axios.put("/api/itemNombre/:itemName", itemName);
     },
 
     createItem: function (itemData) {
