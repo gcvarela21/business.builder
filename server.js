@@ -74,12 +74,10 @@ db.sequelize.sync().then(function () {
 
 
 // peter
-// work on usertable
-// get login to work
+
+// pickup times
+// compilied list of orders
+// notie
 
 
-// -Add the hard coded description
-// -About Page
-// -Finish Editing the Modal
-// -izitoast
 
