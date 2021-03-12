@@ -8,7 +8,7 @@ This is a full-stack React application built for San Francisco-based baker Danie
 ### **Guest Shopper Experience:**
 ![Alt Text](/assets/danielle-showcase.gif)
 
-### **Guest Shopper Experience:**
+### **Admin Experience:**
 ![Alt Text](/assets/admin_backEnd.gif)
 
 ## **Built With**
